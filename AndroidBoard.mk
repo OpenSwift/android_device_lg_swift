@@ -18,38 +18,6 @@ LOCAL_SRC_FILES := $(LOCAL_MODULE)
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE := libmm-adspsvc.so
-LOCAL_MODULE_CLASS := SHARED_LIBRARIES
-LOCAL_MODULE_PATH := $(TARGET_OUT_SHARED_LIBRARIES)
-LOCAL_SRC_FILES := proprietary/$(LOCAL_MODULE)
-OVERRIDE_BUILT_MODULE_PATH := $(TARGET_OUT_INTERMEDIATE_LIBRARIES)
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-LOCAL_MODULE := libOmxH264Dec.so
-LOCAL_MODULE_CLASS := SHARED_LIBRARIES
-LOCAL_MODULE_PATH := $(TARGET_OUT_SHARED_LIBRARIES)
-LOCAL_SRC_FILES := proprietary/$(LOCAL_MODULE)
-OVERRIDE_BUILT_MODULE_PATH := $(TARGET_OUT_INTERMEDIATE_LIBRARIES)
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-LOCAL_MODULE := libOmxMpeg4Dec.so
-LOCAL_MODULE_CLASS := SHARED_LIBRARIES
-LOCAL_MODULE_PATH := $(TARGET_OUT_SHARED_LIBRARIES)
-LOCAL_SRC_FILES := proprietary/$(LOCAL_MODULE)
-OVERRIDE_BUILT_MODULE_PATH := $(TARGET_OUT_INTERMEDIATE_LIBRARIES)
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-LOCAL_MODULE := libOmxVidEnc.so
-LOCAL_MODULE_CLASS := SHARED_LIBRARIES
-LOCAL_MODULE_PATH := $(TARGET_OUT_SHARED_LIBRARIES)
-LOCAL_SRC_FILES := proprietary/$(LOCAL_MODULE)
-OVERRIDE_BUILT_MODULE_PATH := $(TARGET_OUT_INTERMEDIATE_LIBRARIES)
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
 LOCAL_MODULE := libril.so
 LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 LOCAL_MODULE_PATH := $(TARGET_OUT_SHARED_LIBRARIES)
@@ -69,10 +37,45 @@ include $(BUILD_PREBUILT)
 
 # Install the features available on this device.
 
+
+
 # media configuration xml file
 
+## OMX proprietaries
 PRODUCT_COPY_FILES += \
-    device/lg/swift/media_profiles.xml:/system/etc/media_profiles.xml
+    device/lg/swift/proprietary/omx/libmm-adspsvc.so:system/lib/libmm-adspsvc.so \
+    device/lg/swift/proprietary/omx/libOmxAacDec.so:system/lib/libOmxAacDec.so \
+    device/lg/swift/proprietary/omx/libOmxAacDec.so:system/lib/libmm-omxcore.so \
+    device/lg/swift/proprietary/omx/libOmxAmrRtpDec.so:system/lib/libOmxAacEnc.so \
+    device/lg/swift/proprietary/omx/libOmxH264Dec.so:system/lib/libOmxAmrDec.so \
+    device/lg/swift/proprietary/omx/libOmxQcelpDec.so:system/lib/libOmxAmrEnc.so \
+    device/lg/swift/proprietary/omx/libOmxAacEnc.so:system/lib/libOmxAmrRtpDec.so \
+    device/lg/swift/proprietary/omx/libOmxAmrwbDec.so:system/lib/libOmxAmrwbDec.so \
+    device/lg/swift/proprietary/omx/libOmxMp3Dec.so:system/lib/libOmxCore.so \
+    device/lg/swift/proprietary/omx/libOmxVidEnc.so:system/lib/libOmxEvrcDec.so \
+    device/lg/swift/proprietary/omx/libOmxAmrDec.so:system/lib/libOmxEvrcEnc.so \
+    device/lg/swift/proprietary/omx/libOmxEvrcDec.so:system/lib/libOmxH264Dec.so \
+    device/lg/swift/proprietary/omx/libOmxMpeg4Dec.so:system/lib/libOmxMp3Dec.so \
+    device/lg/swift/proprietary/omx/libOmxWmaDec.so:system/lib/libOmxMpeg4Dec.so \
+    device/lg/swift/proprietary/omx/libOmxAmrEnc.so:system/lib/libOmxQcelp13Enc.so \
+    device/lg/swift/proprietary/omx/libOmxEvrcEnc.so:system/lib/libOmxQcelpDec.so \
+    device/lg/swift/proprietary/omx/libOmxQcelp13Enc.so:system/lib/libOmxVidEnc.so \
+    device/lg/swift/proprietary/omx/libOmxWmvDec.so:system/lib/libOmxWmaDec.so \
+    device/lg/swift/proprietary/omx/libOmxWmvDec.so:system/lib/libOmxWmvDec.so
+
+## Camera proprietaries
+PRODUCT_COPY_FILES += \
+    device/lg/swift/proprietary/liboemcamera.so:system/lib/liboemcamera.so \
+    device/lg/swift/proprietary/libmmjpeg.so:system/lib/libmmjpeg.so \
+    device/lg/swift/proprietary/libmmipl.so:system/lib/libmmipl.so \
+    device/lg/swift/proprietary/libcamera.so:obj/lib/libcamera.so \
+    device/lg/swift/proprietary/libcamera.so:system/lib/libcamera.so  
+
+PRODUCT_COPY_FILES += \
+    device/lg/swift/media_profiles.xml:/system/etc/media_profiles.xml \
+    device/lg/swift/prebuilt/AutoVolumeControl.txt:system/etc/AutoVolumeControl.txt \
+    device/lg/swift/prebuilt/AudioFilter.csv:system/etc/AudioFilter.csv \
+    device/lg/swift/prebuilt/apns-conf.xml:system/etc/apns-conf.xml 
 
 PRODUCT_COPY_FILES += \
     frameworks/base/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
@@ -84,7 +87,6 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_COPY_FILES := \
     device/lg/swift/proprietary/libgps.so:obj/lib/libgps.so \
-    device/lg/swift/proprietary/libcamera.so:obj/lib/libcamera.so \
     device/lg/swift/prebuilt/build.prop:system/build.prop \
     device/lg/swift/proprietary/libcamera.so:system/lib/libcamera.so  \
     device/lg/swift/prebuilt/yamato_pfp.fw:system/etc/firmware/yamato_pfp.fw \
@@ -105,7 +107,7 @@ PROPRIETARY := lib/liblgdrmwbxml.so lib/libdll.so lib/libril-qcril-hook-oem.so  
 PROPRIETARY += etc/wl/rtecdc.bin etc/wl/nvram.txt etc/wl/rtecdc-mfgtest.bin lib/modules/wireless.ko bin/wl
 
 #Bluetooth
-PROPRIETARY += bin/BCM4325D1_004.002.004.0262.0270.hcd lib/libbluedroid.so lib/libbluetooth.so lib/libbluetoothd.so bin/bcmtool bin/btld bin/bluetoothd bin/brcm_patchram_plus
+PROPRIETARY += bin/BCM4325D1_004.002.004.0262.0270.hcd lib/libbluetooth.so lib/libbluetoothd.so bin/bcmtool bin/btld bin/bluetoothd bin/brcm_patchram_plus lib/libbluedroid.so 
 
 #OpenGL
 PROPRIETARY += lib/egl/libEGL_adreno200.so lib/egl/libGLESv2_adreno200.so lib/egl/libGLESv1_CM_adreno200.so lib/egl/libq3dtools_adreno200.so lib/libgsl.so
