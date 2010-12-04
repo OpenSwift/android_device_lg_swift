@@ -1,0 +1,1659 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*
+** Copyright 2006, The Android Open Source Project
+**
+** Licensed under the Apache License, Version 2.0 (the "License");
+** you may not use this file except in compliance with the License.
+** You may obtain a copy of the License at
+**
+**     http://www.apache.org/licenses/LICENSE-2.0
+**
+** Unless required by applicable law or agreed to in writing, software
+** distributed under the License is distributed on an "AS IS" BASIS,
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+** See the License for the specific language governing permissions and
+** limitations under the License.
+*/
+-->
+
+<!-- use empty string to specify no proxy or port -->
+
+<!-- If you edit this version, also edit the version in the partner-supplied 
+    apns-conf.xml configuration file -->
+<apns version="6">
+<!-- GW620 Eve setting Starts -->		
+  		
+
+<!--Russia-Baltics  WAP & MMS APN SETTINGS added BY Ramakrishna.K [START] -->
+<!-- Russia- MTS WAP -->
+<!-- Removed FEB-06	<apn carrier="MTS WAP GPRS" 
+		mcc="250" 
+		mnc="01" 
+		apn="wap.mts.ru"
+		user="mts" 
+		server="" 
+		password="mts" 
+		proxy="192.168.192.168" 
+		port="8080"
+		mmsproxy="" 
+		mmsport="" 
+		mmsc=""
+		type="default"
+		preferapp="" /> -->
+
+<!-- Russia- MTS MMS -->
+	<apn carrier="MTS MMS" 
+		mcc="250" 
+		mnc="01" 
+		apn="mms.mts.ru"
+		user="mts" 
+		server="" 
+		password="mts" 
+		proxy="" 
+		port=""
+		mmsproxy="192.168.192.192" 
+		mmsport="8080" 
+		mmsc="http://mmsc"
+		type="mms"
+		preferapp="" />
+
+<!-- Russia- MTS GPRS Internet -->	
+	<apn carrier="MTS GPRS Internet" 
+		mcc="250" 
+		mnc="01" 
+		apn="internet.mts.ru"
+		user="mts" 
+		server="" 
+		password="mts" 
+		proxy="" 
+		port=""
+		mmsproxy=""
+		mmsport=""
+		mmsc=""
+		type="default"
+		preferapp="" />
+
+<!-- Russia- Beeline WAP -->
+<!-- Removed FEB-06	<apn carrier="Beeline WAP GPRS" 
+		mcc="250" 
+		mnc="99" 
+		apn="wap.beeline.ru"
+		user="beeline" 
+		server="" 
+		password="beeline" 
+		proxy="192.168.017.001" 
+		port="8080"
+		mmsproxy="" 
+		mmsport="" 
+		mmsc=""
+		type="default"
+		preferapp="" /> -->
+
+<!-- Russia- Beeline MMS -->
+	<apn carrier="Beeline MMS" 
+		mcc="250" 
+		mnc="99" 
+		apn="mms.beeline.ru"
+		user="beeline" 
+		server="" 
+		password="beeline" 
+		proxy="" 
+		port=""
+		mmsproxy="192.168.094.023" 
+		mmsport="8080" 
+		mmsc="http://mmsc"
+		type="mms"
+		preferapp="" />
+
+<!-- Russia - Beeline GPRS Internet -->	
+	<apn carrier="Beeline GPRS Internet" 
+		mcc="250" 
+		mnc="99" 
+		apn="internet.beeline.ru"
+		user="beeline" 
+		server="" 
+		password="beeline" 
+		proxy="" 
+		port=""
+		mmsproxy=""
+		mmsport=""
+		mmsc=""
+		type="default"
+		preferapp="" />
+
+<!-- Russia- Megafon WAP -->
+<!-- Removed FEB-06	<apn carrier="Megafon WAP GPRS" 
+		mcc="250" 
+		mnc="02" 
+		apn="wap"
+		user="" 
+		server="" 
+		password="" 
+		proxy="010.010.010.010" 
+		port="8080"
+		mmsproxy="" 
+		mmsport="" 
+		mmsc=""
+		type="default"
+		preferapp="" /> -->
+
+<!-- Russia- Megafon MMS -->
+<!--Ramakrishna.K, Changed MMSPROXY 010.010.01.010 to 010.010.010.010, 12-Jan-2010 -->
+<!--Andrey Potikhonov andrey.potikhonov@lge.com. TD5390 user="mms" changed to user="" and password="mms" to password="" , 12-Jan-2010 -->
+	<apn carrier="Megafon MMS" 
+		mcc="250" 
+		mnc="02" 
+		apn="mms"
+		user="" 
+		server="" 
+		password="" 
+		proxy="" 
+		port=""
+		mmsproxy="010.010.010.010" 
+		mmsport="8080" 
+		mmsc="http://mmsc:8002"
+		type="mms"
+		preferapp="" />
+
+<!-- Russia - Megafon GPRS Internet-->	
+	<apn carrier="Megafon GPRS Internet" 
+		mcc="250" 
+		mnc="02" 
+		apn="internet"
+		user="" 
+		server="" 
+		password="" 
+		proxy="" 
+		port=""
+		mmsproxy=""
+		mmsport=""
+		mmsc=""
+		type="default"
+		preferapp="" />
+
+<!-- Russia-  TELE2 MMS -->
+<!-- Bug fix: TDID: 198999: Port 9201 changed to 8080, Ramakrishna.K, 28/12/2009 -->
+	<apn carrier="TELE2 MMS" 
+		mcc="250" 
+		mnc="20" 
+		apn="mms.TELE2.ru"
+		user="" 
+		server="" 
+		password="" 
+		proxy="" 
+		port=""
+		mmsproxy="193.12.40.65" 
+		mmsport="8080" 
+		mmsc="http://mmsc.tele2.ru"
+		type="mms"
+		preferapp="" />
+
+<!-- Russia - TELE2 GPRS Internet -->	
+	<apn carrier="TELE2 GPRS Internet" 
+		mcc="250" 
+		mnc="20" 
+		apn="internet.tele2.ru"
+		user="" 
+		server="" 
+		password="" 
+		proxy="" 
+		port=""
+		mmsproxy=""
+		mmsport=""
+		mmsc=""
+		type="default"
+		preferapp="" />
+
+<!--Andrey Potikhonov andrey.potikhonov@lge.com 18_40_2010 WAP Autoprofiles deleted-->
+<!-- Kazakhstan - BeeLine WAP GPRS-->
+<!--	<apn carrier="BeeLine WAP GPRS" 
+		mcc="401" 
+		mnc="01" 
+		apn="wap.beeline.kz"
+		user="@wap.beeline" 
+		server="" 
+		password="beeline" 
+		proxy="172.027.006.093" 
+		port="8080"
+		mmsproxy="" 
+		mmsport="" 
+		mmsc=""
+		type="default"
+		preferapp="" /> -->
+
+<!--Andrey Potikhonov andrey.potikhonov@lge.com 18_40_2010 Kz Beeline username corrected-->
+<!-- Kazakhstan- BeeLine MMS  -->
+	<apn carrier="BeeLine MMS" 
+		mcc="401" 
+		mnc="01" 
+		apn="mms.beeline.kz"
+		user="@mms.beeline" 
+		server="" 
+		password="beeline" 
+		proxy="" 
+		port=""
+		mmsproxy="172.27.6.93" 
+		mmsport="8080" 
+		mmsc="http://mms.beeline.kz/mms/wapenc"
+		type="mms"
+		preferapp="" />
+
+<!--Andrey Potikhonov andrey.potikhonov@lge.com 18_40_2010 Kz Beeline username corrected-->
+<!-- Kazakhstan - BeeLine Internet GPRS-->	
+	<apn carrier="BeeLine Internet GPRS" 
+		mcc="401" 
+		mnc="01" 
+		apn="internet.beeline.kz"
+		user="@internet.beeline" 
+		server="" 
+		password="beeline" 
+		proxy="" 
+		port=""
+		mmsproxy=""
+		mmsport=""
+		mmsc=""
+		type="default"
+		preferapp="" />
+
+<!--Andrey Potikhonov andrey.potikhonov@lge.com 18_40_2010 WAP Autoprofiles deleted-->
+<!-- Kazakhstan- K-cell WAP GPRS -->
+<!--	<apn carrier="K-cell WAP GPRS" 
+		mcc="401" 
+		mnc="02" 
+		apn="wap"
+		user="" 
+		server="" 
+		password="" 
+		proxy="195.47.255.07" 
+		port="8080"
+		mmsproxy="" 
+		mmsport="" 
+		mmsc=""
+		type="default"
+		preferapp="" /> -->
+
+<!-- Kazakhstan- K-cell MMS  -->
+	<apn carrier="K-cell MMS" 
+		mcc="401" 
+		mnc="02" 
+		apn="mms"
+		user="" 
+		server="" 
+		password="" 
+		proxy="" 
+		port=""
+		mmsproxy="195.047.255.007" 
+		mmsport="8080" 
+		mmsc="http://mms.kcell.kz/post"
+		type="mms"
+		preferapp="" />
+
+<!-- Kazakhstan- K-cell Internet GRPS -->
+	<apn carrier="K-cell Internet GRPS" 
+		mcc="401" 
+		mnc="02" 
+		apn="internet"
+		user="" 
+		server="" 
+		password="" 
+		proxy="" 
+		port=""
+		mmsproxy=""
+		mmsport=""
+		mmsc=""
+		type="default"
+		preferapp="" />
+
+<!--Andrey Potikhonov andrey.potikhonov@lge.com 18_40_2010 WAP Autoprofiles deleted-->
+<!-- Kazakhstan- NEO WAP GPRS  -->
+<!--	<apn carrier="NEO WAP GPRS" 
+		mcc="401" 
+		mnc="77" 
+		apn="wap"
+		user="" 
+		server="" 
+		password="" 
+		proxy="10.1.26.10" 
+		port="8080"
+		mmsproxy="" 
+		mmsport="" 
+		mmsc=""
+		type="default"
+		preferapp="" /> -->
+
+
+<!-- Kazakhstan- NEO MMS  -->
+	<apn carrier="NEO MMS" 
+		mcc="401" 
+		mnc="77" 
+		apn="mms"
+		user="" 
+		server="" 
+		password="" 
+		proxy="" 
+		port=""
+		mmsproxy="10.1.26.10" 
+		mmsport="8080" 
+		mmsc="http://mms.neogsm.kz/mms/wapenc"
+		type="mms"
+		preferapp="" />
+
+<!-- Kazakhstan- NEO Internet GPRS  -->
+	<apn carrier="NEO Internet GPRS" 
+		mcc="401" 
+		mnc="77" 
+		apn="internet"
+		user="" 
+		server="" 
+		password="" 
+		proxy="" 
+		port=""
+		mmsproxy=""
+		mmsport=""
+		mmsc=""
+		type="default"
+		preferapp="" />
+		
+
+<!-- Moldova - Orange_WAP_GPRS  -->
+<!-- MMS port modified, 9201 to 8080. Ramakrishna.K 30/12/2009-->
+<!-- Settings updated, 21-jan-2010, TDID: 204458-->
+	<apn carrier="Orange_Internet" 
+		mcc="259" 
+		mnc="01" 
+		apn="wap.orange.md"
+		user="" 
+		server="" 
+		password="" 
+		proxy="" 
+		port=""
+		mmsproxy="" 
+		mmsport="" 
+		mmsc=""
+		type="default"
+		preferapp="" />
+
+<!-- Moldova - Orange_MMS_GPRS -->
+<!-- MMS port modified, 9201 to 8080. Ramakrishna.K 30/12/2009-->
+<!-- Settings updated, 21-jan-2010, TDID: 204458-->
+	<apn carrier="Orange_MMS_GPRS" 
+		mcc="259" 
+		mnc="01" 
+		apn="mms.orange.md"
+		user="" 
+		server="" 
+		password="" 
+		proxy="" 
+		port=""
+		mmsproxy="192.168.127.125" 
+		mmsport="3128" 
+		mmsc="http://mms/mms"
+		type="mms"
+		preferapp="" />
+
+<!-- Moldova - Moldcell WAP -->
+<!-- MMS port modified, 9201 to 8080. Ramakrishna.K 30/12/2009-->
+<!-- Settings updated, 21-jan-2010, TDID: 204458-->
+	<apn carrier="Moldcell Internet" 
+		mcc="259" 
+		mnc="02" 
+		apn="internet"
+		user="" 
+		server="" 
+		password=""
+		proxy="" 
+		port=""
+		mmsproxy="" 
+		mmsport="" 
+		mmsc=""
+		type="default"
+		preferapp="" />
+
+<!-- Moldova - Moldcell MMS -->
+<!-- MMS port modified, 9201 to 8080. Ramakrishna.K 30/12/2009-->
+<!-- Settings updated, 21-jan-2010, TDID: 204458-->
+	<apn carrier="Moldcell MMS" 
+		mcc="259" 
+		mnc="02" 
+		apn="mms"
+		user="" 
+		server="" 
+		password="" 
+		proxy="" 
+		port=""
+		mmsproxy="10.0.10.10" 
+		mmsport="9401" 
+		mmsc="http://mms.moldcell.md/cmmsc/post"
+		type="mms"
+		preferapp="" />
+
+<!-- Moldova - Eventis WAP -->
+<!-- MMS port modified, 9201 to 8080. Ramakrishna.K 30/12/2009-->
+<!-- Settings updated, 21-jan-2010, TDID: 204458-->
+	<apn carrier="Eventis Internet" 
+		mcc="259" 
+		mnc="04" 
+		apn="internet.md"
+		user="" 
+		server="" 
+		password="" 
+		proxy="" 
+		port=""
+		mmsproxy=""
+		mmsport=""
+		mmsc=""
+		type="default"
+		preferapp="" />
+
+<!-- Moldova - Eventis MMS -->
+<!-- MMS port modified, 9201 to 8080. Ramakrishna.K 30/12/2009-->
+<!-- Settings updated, 21-jan-2010, TDID: 204458-->
+	<apn carrier="Eventis MMS" 
+		mcc="259" 
+		mnc="04" 
+		apn="mms.md"
+		user="" 
+		server="" 
+		password="" 
+		proxy="" 
+		port=""
+		mmsproxy="010.010.010.010"
+		mmsport="9201" 
+		mmsc="http://mmsc:8002/"
+		type="mms"
+		preferapp="" />
+
+<!--Andrey Potikhonov andrey.potikhonov@lge.com 18_40_2010 WAP Autoprofiles deleted-->
+<!-- Ukraine - MTS WAP GPRS  -->
+<!--	<apn carrier="MTS WAP GPRS" 
+		mcc="255" 
+		mnc="01" 
+		apn="wap"
+		user=""
+		server=""
+		password=""
+		proxy="192.168.010.010"
+		port="8080"
+		mmsproxy="" 
+		mmsport="" 
+		mmsc=""
+		type="default"
+		preferapp="" /> -->
+
+<!-- Ukraine - MTS MMS GPRS -->
+	<apn carrier="MTS MMS GPRS" 
+		mcc="255" 
+		mnc="01" 
+		apn="mms"
+		user="" 
+		server="" 
+		password="" 
+		proxy="" 
+		port=""
+		mmsproxy="192.168.010.010" 
+		mmsport="8080" 
+		mmsc="http://mmsc:8002/"
+		type="mms"
+		preferapp="" />
+
+<!-- Ukraine - MTS Internet -->
+	<apn carrier="MTS Internet" 
+		mcc="255" 
+		mnc="01" 
+		apn="internet"
+		user="" 
+		server="" 
+		password="" 
+		proxy="" 
+		port=""
+		mmsproxy=""
+		mmsport=""
+		mmsc=""
+		type="default"
+		preferapp="" />
+
+<!--Andrey Potikhonov andrey.potikhonov@lge.com 18_40_2010 WAP Autoprofiles deleted-->
+<!-- Ukraine - Beeline WAP GPRS -->
+<!--	<apn carrier="Beeline WAP GPRS" 
+		mcc="255" 
+		mnc="02" 
+		apn="wap.beeline.ua"
+		user="" 
+		server="" 
+		password="" 
+		proxy="172.29.18.192" 
+		port="8080"
+		mmsproxy="" 
+		mmsport="" 
+		mmsc=""
+		type="default"
+		preferapp="" /> -->
+
+<!-- Ukraine - Beeline MMS GPRS -->
+	<apn carrier="Beeline MMS GPRS" 
+		mcc="255" 
+		mnc="02" 
+		apn="mms.beeline.ua"
+		user="" 
+		server="" 
+		password="" 
+		proxy="" 
+		port=""
+		mmsproxy="172.29.18.192" 
+		mmsport="8080" 
+		mmsc="http://mms/"
+		type="mms"
+		preferapp="" />
+
+<!-- Ukraine - Beeline Internet -->
+	<apn carrier="Beeline Internet" 
+		mcc="255" 
+		mnc="02" 
+		apn="internet.beeline.ua"
+		user="" 
+		server="" 
+		password="" 
+		proxy="" 
+		port=""
+		mmsproxy=""
+		mmsport=""
+		mmsc=""
+		type="default"
+		preferapp="" />
+
+<!--Andrey Potikhonov andrey.potikhonov@lge.com 18_40_2010 WAP Autoprofiles deleted-->
+<!-- Ukraine - Life:) WAP GPRS -->
+<!--	<apn carrier="Life:) WAP GPRS" 
+		mcc="255" 
+		mnc="06" 
+		apn="wap"
+		user="" 
+		server="" 
+		password="" 
+		proxy="212.58.162.230" 
+		port="8080"
+		mmsproxy="" 
+		mmsport="" 
+		mmsc=""
+		type="default"
+		preferapp="" /> -->
+
+<!-- Ukraine - Life:) MMS GPRS -->
+	<apn carrier="life:) MMS GPRS" 
+		mcc="255" 
+		mnc="06" 
+		apn="mms"
+		user="wgprs" 
+		server="" 
+		password="wap" 
+		proxy="" 
+		port=""
+		mmsproxy="212.58.162.230"
+		mmsport="8080"
+		mmsc="http://mms.life.com.ua/cmmsc/post"
+		type="mms"
+		preferapp="" />
+
+<!-- Ukraine - life:) Internet -->
+	<apn carrier="life:) Internet" 
+		mcc="255" 
+		mnc="06" 
+		apn="internet"
+		user="" 
+		server="" 
+		password="" 
+		proxy="" 
+		port=""
+		mmsproxy=""
+		mmsport=""
+		mmsc=""
+		type="default"
+		preferapp="" />
+
+<!--Andrey Potikhonov andrey.potikhonov@lge.com 18_40_2010 WAP Autoprofiles deleted-->
+<!-- Ukraine - Kyivstar WAP GPRS-->
+<!--	<apn carrier="Kyivstar WAP GPRS" 
+		mcc="255" 
+		mnc="03" 
+		apn="wap.kyivstar.net"
+		user="" 
+		server="" 
+		password="" 
+		proxy="010.010.010.010" 
+		port="8080"
+		mmsproxy=""
+		mmsport=""
+		mmsc=""
+		type="default"
+		preferapp="" /> -->
+
+<!-- Ukraine - Kyivstar MMS GPRS-->
+	<apn carrier="Kyivstar MMS GPRS" 
+		mcc="255" 
+		mnc="03" 
+		apn="mms.kyivstar.net"
+		user="mms" 
+		server="" 
+		password="mms" 
+		proxy="" 
+		port=""
+		mmsproxy="010.010.010.010"
+		mmsport="8080"
+		mmsc="http://mms.kyivstar.net"
+		type="mms"
+		preferapp="" />
+
+<!-- Ukraine - Kyivstar Internet-->
+	<apn carrier="Kyivstar Internet" 
+		mcc="255" 
+		mnc="03" 
+		apn="www.kyivstar.net"
+		user="igprs" 
+		server="" 
+		password="internet" 
+		proxy="" 
+		port=""
+		mmsproxy=""
+		mmsport=""
+		mmsc=""
+		type="default"
+		preferapp="" />
+
+<!--Andrey Potikhonov andrey.potikhonov@lge.com 18_40_2010 WAP Autoprofiles deleted-->
+<!-- Ukraine - Ace&Base WAP GPRS -->
+<!--	<apn carrier="Ace&amp;Base WAP GPRS" 
+		mcc="255" 
+		mnc="03" 
+		apn="wap.ab.kyivstar.net"
+		user="" 
+		server="" 
+		password="" 
+		proxy="010.010.010.010" 
+		port="8080"
+		mmsproxy=""
+		mmsport=""
+		mmsc=""
+		type="default"
+		preferapp="" /> -->
+
+<!-- Ukraine - Ace&Base MMS GPRS -->
+	<apn carrier="Ace&amp;Base MMS GPRS" 
+		mcc="255" 
+		mnc="03" 
+		apn="mms.kyivstar.net"
+		user="mms" 
+		server="" 
+		password="mms" 
+		proxy="" 
+		port=""
+		mmsproxy="010.010.010.010"
+		mmsport="8080"
+		mmsc="http://mms.kyivstar.net"
+		type="mms"
+		preferapp="" />
+
+
+<!-- Ukraine - Ace&Base Internet -->
+	<apn carrier="Ace&amp;Base Internet" 
+		mcc="255" 
+		mnc="03" 
+		apn="www.ab.kyivstar.net"
+		user="igprs" 
+		server="" 
+		password="internet" 
+		proxy="" 
+		port=""
+		mmsproxy=""
+		mmsport=""
+		mmsc=""
+		type="default"
+		preferapp="" />
+
+<!--Andrey Potikhonov andrey.potikhonov@lge.com 18_40_2010 WAP Autoprofiles deleted-->
+<!-- Ukraine - DJUICE WAP GPRS -->
+<!--	<apn carrier="DJUICE WAP GPRS" 
+		mcc="255" 
+		mnc="03" 
+		apn="wap.djuice.com.ua"
+		user="djuice" 
+		server="" 
+		password="wap" 
+		proxy="010.010.010.010" 
+		port="8080"
+		mmsproxy=""
+		mmsport=""
+		mmsc=""
+		type="default"
+		preferapp="" /> -->
+
+<!-- Ukraine - DJUICE MMS GPRS -->
+	<apn carrier="DJUICE MMS GPRS" 
+		mcc="255" 
+		mnc="03" 
+		apn="mms.djuice.com.ua"
+		user="djuice" 
+		server="" 
+		password="mms" 
+		proxy="" 
+		port=""
+		mmsproxy="010.010.010.010"
+		mmsport="8080"
+		mmsc="http://mms.kyivstar.net"
+		type="mms"
+		preferapp="" />
+
+<!-- Ukraine - DJUICE Internet -->
+	<apn carrier="DJUICE Internet" 
+		mcc="255" 
+		mnc="03" 
+		apn="www.djuice.com.ua"
+		user="" 
+		server="" 
+		password="" 
+		proxy="" 
+		port=""
+		mmsproxy=""
+		mmsport=""
+		mmsc=""
+		type="default"
+		preferapp="" />
+
+<!--Andrey Potikhonov andrey.potikhonov@lge.com 18_40_2010 WAP Autoprofiles deleted-->
+<!-- Uzbekistan - MTS-Uzb-GPRSWAP -->
+<!--	<apn carrier="MTS-Uzb-GPRSWAP" 
+		mcc="434" 
+		mnc="07" 
+		apn="wap.mts.uz"
+		user="" 
+		server="" 
+		password="" 
+		proxy="010.010.000.010" 
+		port="8080"
+		mmsproxy=""
+		mmsport=""
+		mmsc=""
+		type="default"
+		preferapp="" /> -->
+
+<!-- Bug fix : TD ID : 198401 Adding HSDPA profiles Ramakrishna.K, 24-DEC-2009-->
+<!-- Uzbekistan -  MTS-Uzb HSDPA -->
+	<apn carrier="MTS-Uzb HSDPA"
+		mcc="434" 
+		mnc="07" 
+		apn="hsdpa.mts.uz"
+		user="" 
+		server="" 
+		password="" 
+		proxy="" 
+		port=""
+		mmsproxy=""
+		mmsport=""
+		mmsc=""
+		type="default"
+		preferapp="" />
+
+<!-- Uzbekistan -  MTS-Uzb-MMS -->
+	<apn carrier="MTS-Uzb-MMS" 
+		mcc="434" 
+		mnc="07" 
+		apn="mms.mts.uz"
+		user="" 
+		server="" 
+		password="" 
+		proxy="" 
+		port=""
+		mmsproxy="010.010.000.010"
+		mmsport="8080"
+		mmsc="http://mmsc/was"
+		type="mms"
+		preferapp="" />
+
+<!-- Uzbekistan -  MTS-Uzb Internet -->
+	<apn carrier="MTS-Uzb Internet"
+		mcc="434" 
+		mnc="07" 
+		apn="net.mts.uz"
+		user="mts" 
+		server="" 
+		password="mts" 
+		proxy="" 
+		port=""
+		mmsproxy=""
+		mmsport=""
+		mmsc=""
+		type="default"
+		preferapp="" />
+		
+
+
+<!--Andrey Potikhonov andrey.potikhonov@lge.com 18_40_2010 WAP Autoprofiles deleted-->
+<!-- Uzbekistan - Beeline-Uz-GPRSWAP  -->
+<!--	<apn carrier="Beeline-Uz-GPRSWAP" 
+		mcc="434" 
+		mnc="04" 
+		apn="wap.beeline.uz"
+		user="beeline" 
+		server="" 
+		password="beeline" 
+		proxy="172.030.030.166" 
+		port="8080"
+		mmsproxy=""
+		mmsport=""
+		mmsc=""
+		type="default"
+		preferapp="" /> -->
+
+		
+<!-- Uzbekistan -  Beeline-Uz-MMS -->
+	<apn carrier="Beeline-Uz-MMS" 
+		mcc="434" 
+		mnc="04" 
+		apn="mms.beeline.uz"
+		user="beeline" 
+		server="" 
+		password="beeline" 
+		proxy="" 
+		port=""
+		mmsproxy="172.030.030.166"
+		mmsport="8080"
+		mmsc="http://mms"
+		type="mms"
+		preferapp="" />
+
+<!-- Uzbekistan -  Beeline-Uz Internet -->
+	<apn carrier="Beeline-Uz Internet" 
+		mcc="434" 
+		mnc="04" 
+		apn="internet.beeline.uz"
+		user="beeline" 
+		server="" 
+		password="beeline" 
+		proxy="" 
+		port=""
+		mmsproxy=""
+		mmsport=""
+		mmsc=""
+		type="default"
+		preferapp="" />
+
+<!--Andrey Potikhonov andrey.potikhonov@lge.com 18_40_2010 WAP Autoprofiles deleted-->
+<!-- Uzbekistan -  Ucell WAPGPRS -->
+<!--	<apn carrier="Ucell WAPGPRS" 
+		mcc="434" 
+		mnc="05" 
+		apn="wap"
+		user="" 
+		server="" 
+		password="" 
+		proxy="010.064.164.010" 
+		port="8080"
+		mmsproxy=""
+		mmsport=""
+		mmsc=""
+		type="default"
+		preferapp="" /> -->
+
+<!-- Uzbekistan -  Ucell MMS -->
+	<apn carrier="Ucell MMS" 
+		mcc="434" 
+		mnc="05" 
+		apn="mms"
+		user="" 
+		server="" 
+		password="" 
+		proxy="" 
+		port=""
+		mmsproxy="010.064.164.010"
+		mmsport="8080"
+		mmsc="http://mmsc:8002/"
+		type="mms"
+		preferapp="" />
+
+<!-- Uzbekistan -  Ucell Internet -->
+	<apn carrier="Ucell Internet" 
+		mcc="434" 
+		mnc="05" 
+		apn="internet"
+		user="" 
+		server="" 
+		password="" 
+		proxy="" 
+		port=""
+		mmsproxy=""
+		mmsport=""
+		mmsc=""
+		type="default"
+		preferapp="" />
+
+<!-- Baltics - Lithuania - Omnitel Wap -->
+	<apn carrier="Omni SurfPort"
+		mcc="246" 
+		mnc="01" 
+		apn="omnitel"
+		user="" 
+		server="" 
+		password="" 
+		proxy="194.176.032.151" 
+		port="8080"
+		mmsproxy=""
+		mmsport=""
+		mmsc=""
+		type="default"
+		preferapp="" />
+
+<!-- Baltics - Lithuania - Omni MMS -->
+	<apn carrier="Omni MMS" 
+		mcc="246" 
+		mnc="01" 
+		apn="gprs.mms.lt"
+		user="" 
+		server="" 
+		password="" 
+		proxy="" 
+		port=""
+		mmsproxy="194.176.032.149"
+		mmsport="8080"
+		mmsc="http://mms.omnitel.net:8002/"
+		type="mms"
+		preferapp="" />
+<!-- Baltics - Lithuania - Omni Streaming  -->
+	<apn carrier="Omni Streaming" 
+		mcc="246" 
+		mnc="01" 
+		apn="omnitel"
+		user="" 
+		server="" 
+		password="" 
+		proxy="" 
+		port=""
+		mmsproxy=""
+		mmsport=""
+		mmsc=""
+		type="default"
+		preferapp="" />
+
+	<!-- Baltics - Lithuania - Bite WAP Profile   -->
+	<!-- MMS port modified, 9201 to 8080. Ramakrishna.K 30/12/2009-->
+	<apn carrier="BITE GPRS"
+		mcc="246"
+		mnc="02" 
+		apn="wap"
+		user="" 
+		server="" 
+		password="" 
+		proxy="213.226.131.133" 
+		port="8080"
+		mmsproxy=""
+		mmsport=""
+		mmsc=""
+		type="default"
+		preferapp="" />
+	<!-- Baltics - Luthiania - Bite - MMS  -->
+	<apn carrier="Bite MMS" 
+		mcc="246" 
+		mnc="02" 
+		apn="mms"
+		user="mms@mms" 
+		server="" 
+		password="mms" 
+		proxy="" 
+		port=""
+		mmsproxy="192.168.150.002"
+		mmsport="8080"
+		mmsc="http://mmsc/servlets/mms"
+		type="mms"
+		preferapp="" />
+
+	<!-- Baltics - Luthiania - Bite - LABAS GPRS WAP  -->
+	<!-- MMS port modified, 9201 to 8080. Ramakrishna.K 30/12/2009-->
+	<apn carrier="LABAS GPRS" 
+		mcc="246" 
+		mnc="02" 
+		apn="wap"
+		user="wap" 
+		server="" 
+		password="wap" 
+		proxy="213.226.131.133" 
+		port="8080"
+		mmsproxy=""
+		mmsport=""
+		mmsc=""
+		type="default"
+		preferapp="" />
+
+	<!-- Baltics - Luthiania - Bite streaming  -->
+	<apn carrier="BITE Streaming" 
+		mcc="246" 
+		mnc="02" 
+		apn="wap"
+		user="" 
+		server="" 
+		password="" 
+		proxy="" 
+		port=""
+		mmsproxy=""
+		mmsport=""
+		mmsc=""
+		type="default"
+		preferapp="" />
+
+	<!-- Baltics - Luthiania -  Tele2 - WAP profile1 -->
+	<apn carrier="TELE2 GPRS" 
+		mcc="246"
+		mnc="03"
+		apn="internet.tele2.lt"
+		user="wap" 
+		server="" 
+		password="wap" 
+		proxy="130.244.196.090" 
+		port="8080"
+		mmsproxy=""
+		mmsport=""
+		mmsc=""
+		type="default"
+		preferapp="" />
+
+	<!-- Baltics - Luthiania - Tele2 - MMS profile1 -->
+	<apn carrier="TELE2 MMS" 
+		mcc="246" 
+		mnc="03" 
+		apn="mms.tele2.lt"
+		user="wap" 
+		server="" 
+		password="wap" 
+		proxy="" 
+		port=""
+		mmsproxy="193.012.040.029"
+		mmsport="8080"
+		mmsc="http://mmsc.tele2.lt"
+		type="mms"
+		preferapp="" />
+
+	<!-- Baltics - Luthiania - Tele2 - Streaming1  -->
+	<apn carrier="TELE2 Streaming" 
+		mcc="246" 
+		mnc="03" 
+		apn="internet.tele2.lt"
+		user="" 
+		server="" 
+		password="" 
+		proxy="" 
+		port=""
+		mmsproxy=""
+		mmsport=""
+		mmsc=""
+		type="default"
+		preferapp="" />
+
+	<!-- Baltics - Luthiania - Tele2 - Wap profile2  -->
+	<apn carrier="PILDYK GPRS" 
+		mcc="246" 
+		mnc="03" 
+		apn="wap.tele2.lt"
+		user="wap" 
+		server="" 
+		password="wap" 
+		proxy="130.244.196.090" 
+		port="8080"
+		mmsproxy=""
+		mmsport=""
+		mmsc=""
+		type="default"
+		preferapp="" />
+
+	<!-- Baltics - Luthiania - Tele2 - MMS profile2  -->
+	<apn carrier="PILDYK GPRS" 
+		mcc="246" 
+		mnc="03" 
+		apn="wap.tele2.lt"
+		user="" 
+		server="" 
+		password="" 
+		proxy="" 
+		port=""
+		mmsproxy="193.012.040.029"
+		mmsport="8080"
+		mmsc="http://mmsc.tele2.lt"
+		type="mms"
+		preferapp="" />
+
+		
+		<!-- Baltics - Luthiania - Tele2 Streaming profile2 -->
+	<apn carrier="PILDYK Streaming" 
+		mcc="246" 
+		mnc="03" 
+		apn="wap.tele2.lt"
+		user="" 
+		server="" 
+		password="" 
+		proxy="" 
+		port=""
+		mmsproxy=""
+		mmsport=""
+		mmsc=""
+		type="default"
+		preferapp="" />
+
+		<!-- Baltics - Latvia - LMT open - WAP profile1  -->
+	<apn carrier="LMT GPRS" 
+		mcc="247" 
+		mnc="01" 
+		apn="internet.lmt.lv"
+		user="" 
+		server="" 
+		password="" 
+		proxy="" 
+		port=""
+		mmsproxy=""
+		mmsport=""
+		mmsc=""
+		type="default"
+		preferapp="" />
+
+		<!-- Baltics - Latvia - LMT open - MMS Profile1, 9201 change to 8080 24-DEC-2009 Ramakrishna.K  -->
+	<apn carrier="LMT MMS" 
+		mcc="247" 
+		mnc="01" 
+		apn="mms.lmt.lv"
+		user="lmt" 
+		server="" 
+		password="lmt" 
+		proxy="" 
+		port=""
+		mmsproxy="212.093.097.201"
+		mmsport="8080"
+		mmsc="http://mmsc.lmt.lv/mmsc"
+		type="mms"
+		preferapp="" />
+		<!-- Baltics - Latvia - LMT open - Streaming Profile1  -->
+	<apn carrier="LMT Streaming" 
+		mcc="247" 
+		mnc="01" 
+		apn="video.lmt.lv"
+		user="" 
+		server="" 
+		password="" 
+		proxy="" 
+		port=""
+		mmsproxy=""
+		mmsport=""
+		mmsc=""
+		type="default"
+		preferapp="" />
+
+<!-- Baltics - Latvia - LMT open - Wap profile2  -->
+	<apn carrier="OKarte GPRS" 
+		mcc="247" 
+		mnc="01" 
+		apn="okarte.lmt.lv"
+		user="" 
+		server="" 
+		password="" 
+		proxy="" 
+		port=""
+		mmsproxy=""
+		mmsport=""
+		mmsc=""
+		type="default"
+		preferapp="" />
+
+<!-- Baltics - Latvia - LMT open - MMS profile2, 9201 change to 8080 24-DEC-2009 Ramakrishna.K-->	
+
+	<apn carrier="OKarte MMS" 
+		mcc="247" 
+		mnc="01" 
+		apn="okarte.mms.lmt.lv"
+		user="lmt" 
+		server="" 
+		password="lmt" 
+		proxy="" 
+		port=""
+		mmsproxy="212.093.097.201"
+		mmsport="8080"
+		mmsc="http://mmsc.lmt.lv/mmsc"
+		type="mms"
+		preferapp="" />
+
+<!-- Baltics - Latvia - Tele2 - Wap profile1 -->	
+
+	<apn carrier="TELE2 GPRS" 
+		mcc="247" 
+		mnc="02" 
+		apn="internet.tele2.lv"
+		user="wap" 
+		server="" 
+		password="wap" 
+		proxy="130.244.196.090" 
+		port="8080"
+		mmsproxy=""
+		mmsport=""
+		mmsc=""
+		type="default"
+		preferapp="" />
+
+<!-- Baltics - Latvia - Tele2 - MMS profile1-->	
+
+	<apn carrier="TELE2 MMS" 
+		mcc="247" 
+		mnc="02" 
+		apn="mms.tele2.lv"
+		user="wap" 
+		server="" 
+		password="wap" 
+		proxy="" 
+		port=""
+		mmsproxy="193.012.040.038"
+		mmsport="8080"
+		mmsc="http://mmsc.tele2.lv"
+		type="mms"
+		preferapp="" />
+
+<!-- Baltics - Latvia - Tele2 - Streaming profile1-->	
+
+	<apn carrier="TELE2 Streaming" 
+		mcc="247" 
+		mnc="02" 
+		apn="internet.tele2.lv"
+		user="" 
+		server="" 
+		password="" 
+		proxy="" 
+		port=""
+		mmsproxy=""
+		mmsport=""
+		mmsc=""
+		type="default"
+		preferapp="" />
+
+<!-- Baltics - Latvia - Tele2 - Wap profile2-->	
+
+	<apn carrier="ZZ GPRS" 
+		mcc="247" 
+		mnc="02" 
+		apn="wap.tele2.lv"
+		user="wap" 
+		server="" 
+		password="wap" 
+		proxy="130.244.196.090" 
+		port="8080"
+		mmsproxy=""
+		mmsport=""
+		mmsc=""
+		type="default"
+		preferapp="" />
+
+<!-- Baltics - Latvia - Bite Open - Wap Profile-->	
+
+	<apn carrier="BITE GPRS" 
+		mcc="247" 
+		mnc="05" 
+		apn="wap"
+		user="" 
+		server="" 
+		password="" 
+		proxy="" 
+		port=""
+		mmsproxy=""
+		mmsport=""
+		mmsc=""
+		type="default"
+		preferapp="" />
+
+<!-- Baltics - Latvia - Bite Open - MMS profile-->	
+
+	<apn carrier="BITE MMS" 
+		mcc="247" 
+		mnc="05" 
+		apn="mms"
+		user="mms@mms" 
+		server="mms" 
+		password="" 
+		proxy="" 
+		port=""
+		mmsproxy="192.168.150.002"
+		mmsport="8080"
+		mmsc="http://mmsc/servlets/mms"
+		type="mms"
+		preferapp="" />
+
+<!-- Baltics - Latvia - Bite Open - Streaming profile-->	
+
+	<apn carrier="BITE Streaming" 
+		mcc="247" 
+		mnc="05" 
+		apn="wap"
+		user="" 
+		server="" 
+		password="" 
+		proxy="" 
+		port=""
+		mmsproxy=""
+		mmsport=""
+		mmsc=""
+		type="default"
+		preferapp="" />
+
+<!-- Baltics - Estonia - EMT - Wap profile1-->	
+
+	<apn carrier="EMT GPRS" 
+		mcc="248" 
+		mnc="01" 
+		apn="wap.emt.ee"
+		user="" 
+		server="" 
+		password="" 
+		proxy="217.071.032.236" 
+		port="8080"
+		mmsproxy=""
+		mmsport=""
+		mmsc=""
+		type="default"
+		preferapp="" />
+
+<!-- Baltics - Estonia - EMT - MMS profile1 -->	
+
+	<apn carrier="EMT MMS" 
+		mcc="248" 
+		mnc="01" 
+		apn="mms.emt.ee"
+		user="" 
+		server="" 
+		password="" 
+		proxy="" 
+		port=""
+		mmsproxy="217.071.032.082"
+		mmsport="8080"
+		mmsc="http://mms.emt.ee/servlets/mms"
+		type="mms"
+		preferapp="" />
+
+<!-- Baltics - Estonia - EMT - Streaming Profile1-->	
+
+	<apn carrier="EMT Streaming" 
+		mcc="248" 
+		mnc="01" 
+		apn="wap.emt.ee"
+		user="" 
+		server="" 
+		password="" 
+		proxy="" 
+		port=""
+		mmsproxy=""
+		mmsport=""
+		mmsc=""
+		type="default"
+		preferapp="" />
+
+<!-- Baltics - Estonia - EMT - WAP Profile2 -->	
+
+	<apn carrier="Simpel GPRS" 
+		mcc="248" 
+		mnc="01" 
+		apn="wap2.emt.ee"
+		user="" 
+		server="" 
+		password="" 
+		proxy="217.071.032.236" 
+		port="8080"
+		mmsproxy=""
+		mmsport=""
+		mmsc=""
+		type="default"
+		preferapp="" />
+
+<!-- Baltics - Estonia - EMT - MMS Profile2 -->	
+
+	<apn carrier="Simpel MMS" 
+		mcc="248" 
+		mnc="01" 
+		apn="mms2.emt.ee"
+		user="" 
+		server="" 
+		password="" 
+		proxy="" 
+		port=""
+		mmsproxy="217.071.032.082"
+		mmsport="8080"
+		mmsc="http://mms.emt.ee/servlets/mms"
+		type="mms"
+		preferapp="" />
+
+<!-- Baltics - Estonia - EMT - Streaming profile 2-->	
+
+	<apn carrier="Simpel Streaming" 
+		mcc="248" 
+		mnc="01" 
+		apn="wap2.emt.ee"
+		user="" 
+		server="" 
+		password="" 
+		proxy="" 
+		port=""
+		mmsproxy=""
+		mmsport=""
+		mmsc=""
+		type="default"
+		preferapp="" />
+
+<!-- Baltics - Estonia - EMT - GPRS-->	
+	<apn carrier="EMT_Internet" 
+		mcc="248" 
+		mnc="01" 
+		apn="internet.emt.ee"
+		user="" 
+		server="" 
+		password="" 
+		proxy="" 
+		port=""
+		mmsproxy=""
+		mmsport=""
+		mmsc=""
+		type="default"
+		preferapp="" />
+		
+<!-- Baltics - Estonia - EMT - GPRS-->	
+	<apn carrier="Simpel/POP!_Internet" 
+		mcc="248" 
+		mnc="01" 
+		apn="internet2.emt.ee"
+		user="" 
+		server="" 
+		password="" 
+		proxy="" 
+		port=""
+		mmsproxy=""
+		mmsport=""
+		mmsc=""
+		type="default"
+		preferapp="" />		
+		
+<!-- Baltics - Estonia - Elisa wap profile-->	
+
+<!--	<apn carrier="ELISA GPRS" 
+		mcc="248" 
+		mnc="02" 
+		apn="wap"
+		user="" 
+		server="" 
+		password="" 
+		proxy="194.204.002.006" 
+		port="8000"
+		mmsproxy=""
+		mmsport=""
+		mmsc=""
+		type="default"
+		preferapp="" /> -->
+
+<!-- Baltics - Estonia - Elisa MMS Profile-->	
+
+	<apn carrier="ELISA MMS" 
+		mcc="248" 
+		mnc="02" 
+		apn="mms"
+		user="" 
+		server="" 
+		password="" 
+		proxy="" 
+		port=""
+		mmsproxy="194.204.002.006"
+		mmsport="8000"
+		mmsc="http://194.204.002.010/"
+		type="mms"
+		preferapp="" />
+
+<!-- Baltics - Estonia - Elisa Streaming-->	
+
+	<apn carrier="Elisa Internet" 
+		mcc="248" 
+		mnc="02" 
+		apn="internet"
+		user="" 
+		server="" 
+		password="" 
+		proxy="" 
+		port=""
+		mmsproxy=""
+		mmsport=""
+		mmsc=""
+		type="default"
+		preferapp="" />
+
+<!-- Baltics - Estonia - Tele2 Wap profile1-->	
+
+	<apn carrier="TELE2 GPRS" 
+		mcc="248" 
+		mnc="03" 
+		apn="internet.tele2.ee"
+		user="wap" 
+		server="" 
+		password="wap" 
+		proxy="130.244.196.090" 
+		port="8080"
+		mmsproxy=""
+		mmsport=""
+		mmsc=""
+		type="default"
+		preferapp="" />
+
+<!-- Baltics - Estonia - Tele2 MMS Profile1-->	
+
+	<apn carrier="TELE2 MMS" 
+		mcc="248" 
+		mnc="03" 
+		apn="mms.tele2.ee"
+		user="wap" 
+		server="" 
+		password="wap" 
+		proxy="" 
+		port=""
+		mmsproxy="193.012.040.006"
+		mmsport="8080"
+		mmsc="http://mmsc.tele2.ee"
+		type="mms"
+		preferapp="" />
+
+<!-- Baltics - Estonia - Tele2 Streaming Profile1-->	
+
+	<apn carrier="TELE2 Streaming" 
+		mcc="248" 
+		mnc="03" 
+		apn="internet.tele2.ee"
+		user="" 
+		server="" 
+		password="" 
+		proxy="" 
+		port=""
+		mmsproxy=""
+		mmsport=""
+		mmsc=""
+		type="default"
+		preferapp="" />
+
+<!-- Baltics - Estonia - Tele2 Wap & MMS profile2-->	
+
+	<apn carrier="SMART/ULTRA GPRS" 
+		mcc="248" 
+		mnc="03" 
+		apn="wap.tele2.ee"
+		user="wap" 
+		server="" 
+		password="wap" 
+		proxy="130.244.196.090" 
+		port="8080"
+		mmsproxy="193.012.040.006"
+		mmsport="8080"
+		mmsc="http://mmsc.tele2.ee"
+		type=""
+		preferapp="" />
+
+<!-- Baltics - Estonia - Smart/Ultra MMS Profile1-->	
+
+	<apn carrier="Smart/Ultra MMS" 
+		mcc="248" 
+		mnc="03" 
+		apn="mms.tele2.ee"
+		user="wap" 
+		server="" 
+		password="wap" 
+		proxy="" 
+		port=""
+		mmsproxy="193.012.040.006"
+		mmsport="80800"
+		mmsc="http://mmsc.tele2.ee"
+		type="mms"
+		preferapp="" />
+		
+<!-- Baltics - Estonia - Tele2 Streaming Profile2-->	
+
+	<apn carrier="SMART/ULTRA Streaming" 
+		mcc="248" 
+		mnc="03" 
+		apn="wap.tele2.ee"
+		user="" 
+		server="" 
+		password="" 
+		proxy="" 
+		port=""
+		mmsproxy=""
+		mmsport=""
+		mmsc=""
+		type="default"
+		preferapp="" />
+
+<!--Russia-Baltics  WAP & MMS APN SETTINGS added BY Ramakrishna.K [End] -->
+
+
+<!-- Ukranian Utel [Start] -->	
+<apn carrier="Utel Internet" 
+		mcc="255"
+		mnc="07"
+		apn="3g.utel.ua"
+		user="" 
+		server="" 
+		password="" 
+		proxy="" 
+		port=""
+		mmsproxy=""
+		mmsport=""
+		mmsc=""
+		type="default"
+		preferapp="" />
+
+<apn carrier="Utel Mms" 
+		mcc="255" 
+		mnc="07" 
+		apn="3g.utel.ua"
+		user="" 
+		server="" 
+		password="" 
+		proxy="" 
+		port=""
+		mmsproxy="10.212.3.148"
+		mmsport="8080"
+		mmsc="http://10.212.1.4/mms/wapenc"
+		type="mms"
+		preferapp="" />
+<!-- Ukranian Utel [End] -->	
+
+</apns>
