@@ -88,7 +88,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES := \
     device/lg/swift/proprietary/libgps.so:obj/lib/libgps.so \
     device/lg/swift/prebuilt/build.prop:system/build.prop \
-    device/lg/swift/proprietary/libcamera.so:system/lib/libcamera.so  \
     device/lg/swift/prebuilt/yamato_pfp.fw:system/etc/firmware/yamato_pfp.fw \
     device/lg/swift/prebuilt/yamato_pm4.fw:system/etc/firmware/yamato_pm4.fw \
     device/lg/swift/proprietary/lgdrmserver:system/bin/lgdrmserver \
@@ -98,7 +97,7 @@ PRODUCT_COPY_FILES := \
 
 #GSM
 PROPRIETARY := lib/liblgdrmwbxml.so lib/libdll.so lib/libril-qcril-hook-oem.so  lib/libwms.so \
-               lib/libnv.so lib/libril_log.so lib/liblgerft.so lib/libc.so  \
+               lib/libnv.so lib/libril_log.so lib/liblgerft.so \
                lib/liboem_rapi.so lib/libdss.so lib/libqmi.so lib/libmmgsdilib.so lib/libcm.so lib/liboncrpc.so lib/libdsm.so lib/libqueue.so \
 	       lib/libril-qc-1.so lib/libdiag.so lib/libgsdi_exp.so lib/libgsdi_exp.so lib/libgstk_exp.so lib/libwmsts.so lib/libpbmlib.so \
 	       lib/liblgeat.so lib/liblgdrm.so lib/libbcmwl.so lib/libauth.so
