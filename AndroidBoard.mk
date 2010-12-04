@@ -85,7 +85,7 @@ PRODUCT_COPY_FILES += \
     frameworks/base/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml \
     frameworks/base/data/etc/android.hardware.touchscreen.multitouch.xml:system/etc/permissions/android.hardware.touchscreen.multitouch.xml
 
-PRODUCT_COPY_FILES := \
+PRODUCT_COPY_FILES += \
     device/lg/swift/proprietary/libgps.so:obj/lib/libgps.so \
     device/lg/swift/prebuilt/build.prop:system/build.prop \
     device/lg/swift/prebuilt/yamato_pfp.fw:system/etc/firmware/yamato_pfp.fw \
@@ -104,6 +104,10 @@ PROPRIETARY := lib/liblgdrmwbxml.so lib/libdll.so lib/libril-qcril-hook-oem.so  
 
 #Wifi
 PROPRIETARY += etc/wl/rtecdc.bin etc/wl/nvram.txt etc/wl/rtecdc-mfgtest.bin lib/modules/wireless.ko bin/wl
+
+#Linker
+PROPRIETARY += bin/linker
+PRODUCT_COPY_FILES += device/lg/swift/proprietary/linker:system/bin/linker
 
 #Bluetooth
 PROPRIETARY += bin/BCM4325D1_004.002.004.0262.0270.hcd lib/libbluetooth.so lib/libbluetoothd.so bin/bcmtool bin/btld bin/bluetoothd bin/brcm_patchram_plus lib/libbluedroid.so 
