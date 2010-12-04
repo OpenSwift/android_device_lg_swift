@@ -43,25 +43,25 @@ include $(BUILD_PREBUILT)
 
 ## OMX proprietaries
 PRODUCT_COPY_FILES += \
-    device/lg/swift/proprietary/libmm-adspsvc.so:system/lib/libmm-adspsvc.so \
-    device/lg/swift/proprietary/libOmxAacDec.so:system/lib/libOmxAacDec.so \
-    device/lg/swift/proprietary/libOmxAacDec.so:system/lib/libmm-omxcore.so \
-    device/lg/swift/proprietary/libOmxAmrRtpDec.so:system/lib/libOmxAacEnc.so \
-    device/lg/swift/proprietary/libOmxH264Dec.so:system/lib/libOmxAmrDec.so \
-    device/lg/swift/proprietary/libOmxQcelpDec.so:system/lib/libOmxAmrEnc.so \
-    device/lg/swift/proprietary/libOmxAacEnc.so:system/lib/libOmxAmrRtpDec.so \
-    device/lg/swift/proprietary/libOmxAmrwbDec.so:system/lib/libOmxAmrwbDec.so \
-    device/lg/swift/proprietary/libOmxMp3Dec.so:system/lib/libOmxCore.so \
-    device/lg/swift/proprietary/libOmxVidEnc.so:system/lib/libOmxEvrcDec.so \
-    device/lg/swift/proprietary/libOmxAmrDec.so:system/lib/libOmxEvrcEnc.so \
-    device/lg/swift/proprietary/libOmxEvrcDec.so:system/lib/libOmxH264Dec.so \
-    device/lg/swift/proprietary/libOmxMpeg4Dec.so:system/lib/libOmxMp3Dec.so \
-    device/lg/swift/proprietary/libOmxWmaDec.so:system/lib/libOmxMpeg4Dec.so \
-    device/lg/swift/proprietary/libOmxAmrEnc.so:system/lib/libOmxQcelp13Enc.so \
-    device/lg/swift/proprietary/libOmxEvrcEnc.so:system/lib/libOmxQcelpDec.so \
-    device/lg/swift/proprietary/libOmxQcelp13Enc.so:system/lib/libOmxVidEnc.so \
-    device/lg/swift/proprietary/libOmxWmvDec.so:system/lib/libOmxWmaDec.so \
-    device/lg/swift/proprietary/libOmxWmvDec.so:system/lib/libOmxWmvDec.so
+    device/lg/swift/proprietary/omx/libmm-adspsvc.so:system/lib/libmm-adspsvc.so \
+    device/lg/swift/proprietary/omx/libOmxAacDec.so:system/lib/libOmxAacDec.so \
+    device/lg/swift/proprietary/omx/libOmxAacDec.so:system/lib/libmm-omxcore.so \
+    device/lg/swift/proprietary/omx/libOmxAmrRtpDec.so:system/lib/libOmxAacEnc.so \
+    device/lg/swift/proprietary/omx/libOmxH264Dec.so:system/lib/libOmxAmrDec.so \
+    device/lg/swift/proprietary/omx/libOmxQcelpDec.so:system/lib/libOmxAmrEnc.so \
+    device/lg/swift/proprietary/omx/libOmxAacEnc.so:system/lib/libOmxAmrRtpDec.so \
+    device/lg/swift/proprietary/omx/libOmxAmrwbDec.so:system/lib/libOmxAmrwbDec.so \
+    device/lg/swift/proprietary/omx/libOmxMp3Dec.so:system/lib/libOmxCore.so \
+    device/lg/swift/proprietary/omx/libOmxVidEnc.so:system/lib/libOmxEvrcDec.so \
+    device/lg/swift/proprietary/omx/libOmxAmrDec.so:system/lib/libOmxEvrcEnc.so \
+    device/lg/swift/proprietary/omx/libOmxEvrcDec.so:system/lib/libOmxH264Dec.so \
+    device/lg/swift/proprietary/omx/libOmxMpeg4Dec.so:system/lib/libOmxMp3Dec.so \
+    device/lg/swift/proprietary/omx/libOmxWmaDec.so:system/lib/libOmxMpeg4Dec.so \
+    device/lg/swift/proprietary/omx/libOmxAmrEnc.so:system/lib/libOmxQcelp13Enc.so \
+    device/lg/swift/proprietary/omx/libOmxEvrcEnc.so:system/lib/libOmxQcelpDec.so \
+    device/lg/swift/proprietary/omx/libOmxQcelp13Enc.so:system/lib/libOmxVidEnc.so \
+    device/lg/swift/proprietary/omx/libOmxWmvDec.so:system/lib/libOmxWmaDec.so \
+    device/lg/swift/proprietary/omx/libOmxWmvDec.so:system/lib/libOmxWmvDec.so
 
 ## Camera proprietaries
 PRODUCT_COPY_FILES += \
