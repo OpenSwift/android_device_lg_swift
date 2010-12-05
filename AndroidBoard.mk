@@ -103,7 +103,7 @@ PROPRIETARY := lib/liblgdrmwbxml.so lib/libdll.so lib/libril-qcril-hook-oem.so  
 	       lib/liblgeat.so lib/liblgdrm.so lib/libbcmwl.so lib/libauth.so
 
 #Wifi
-PROPRIETARY += etc/wl/rtecdc.bin etc/wl/nvram.txt etc/wl/rtecdc-mfgtest.bin lib/modules/wireless.ko bin/wl
+PROPRIETARY += etc/wl/rtecdc.bin etc/wl/nvram.txt etc/wl/rtecdc-mfgtest.bin lib/modules/wireless.ko bin/wl bin/wpa_supplicant
 
 #Linker
 PROPRIETARY += bin/linker
