@@ -110,7 +110,7 @@ PROPRIETARY += bin/linker
 PRODUCT_COPY_FILES += device/lg/swift/proprietary/linker:system/bin/linker
 
 #Bluetooth
-PROPRIETARY += bin/BCM4325D1_004.002.004.0262.0270.hcd lib/libbluetooth.so lib/libbluetoothd.so bin/bcmtool bin/btld bin/bluetoothd bin/brcm_patchram_plus lib/libbluedroid.so 
+PROPRIETARY += bin/BCM4325D1_004.002.004.0262.0270.hcd lib/libbluetooth.so lib/libbluetoothd.so bin/bcmtool bin/btld bin/bluetoothd bin/brcm_patchram_plus lib/libbluedroid.so bin/hciattach bin/logwrapper
 
 #OpenGL
 PROPRIETARY += lib/egl/libEGL_adreno200.so lib/egl/libGLESv2_adreno200.so lib/egl/libGLESv1_CM_adreno200.so lib/egl/libq3dtools_adreno200.so lib/libgsl.so
