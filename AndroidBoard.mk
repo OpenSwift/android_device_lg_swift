@@ -1,16 +1,5 @@
 LOCAL_PATH := $(call my-dir)
 
-ifeq ($(TARGET_KERNEL_CONFIG),)
-ifeq ($(TARGET_PREBUILT_KERNEL),)
-TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)/kernel
-endif # TARGET_PREBUILT_KERNEL
-endif # TARGET_KERNEL_CONFIG
-
-file := $(INSTALLED_KERNEL_TARGET)
-ALL_PREBUILT += $(file)
-$(file): $(TARGET_PREBUILT_KERNEL) | $(ACP)
-	$(transform-prebuilt-to-target)
-
 include $(CLEAR_VARS)
 LOCAL_MODULE_CLASS := ETC
 LOCAL_MODULE := vold.fstab
@@ -75,7 +64,8 @@ PRODUCT_COPY_FILES += \
     device/lg/swift/media_profiles.xml:/system/etc/media_profiles.xml \
     device/lg/swift/prebuilt/AutoVolumeControl.txt:system/etc/AutoVolumeControl.txt \
     device/lg/swift/prebuilt/AudioFilter.csv:system/etc/AudioFilter.csv \
-    device/lg/swift/prebuilt/apns-conf.xml:system/etc/apns-conf.xml 
+    device/lg/swift/prebuilt/apns-conf.xml:system/etc/apns-conf.xml  \
+    device/lg/swift/prebuilt/dhcpcd.conf:system/etc/dhcpcd/dhcpcd.conf 
 
 PRODUCT_COPY_FILES += \
     frameworks/base/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
@@ -83,31 +73,32 @@ PRODUCT_COPY_FILES += \
     frameworks/base/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml \
     frameworks/base/data/etc/android.hardware.location.gps.xml:system/etc/permissions/android.hardware.location.gps.xml \
     frameworks/base/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml \
-    frameworks/base/data/etc/android.hardware.touchscreen.multitouch.xml:system/etc/permissions/android.hardware.touchscreen.multitouch.xml
 
 PRODUCT_COPY_FILES += \
     device/lg/swift/proprietary/libgps.so:obj/lib/libgps.so \
-    device/lg/swift/prebuilt/build.prop:system/build.prop \
     device/lg/swift/prebuilt/yamato_pfp.fw:system/etc/firmware/yamato_pfp.fw \
     device/lg/swift/prebuilt/yamato_pm4.fw:system/etc/firmware/yamato_pm4.fw \
-    device/lg/swift/proprietary/lgdrmserver:system/bin/lgdrmserver \
-    device/lg/swift/proprietary/lgesystemd:system/bin/lgesystemd \
     device/lg/swift/proprietary/akmd2:system/bin/akmd2  \
     device/lg/swift/prebuilt/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
+    
+# device/lg/swift/proprietary/lgdrmserver:system/bin/lgdrmserver 
+# device/lg/swift/proprietary/lgesystemd:system/bin/lgesystemd 
 
 #GSM
-PROPRIETARY := lib/liblgdrmwbxml.so lib/libdll.so lib/libril-qcril-hook-oem.so  lib/libwms.so \
+PROPRIETARY += lib/liblgdrmwbxml.so lib/libdll.so lib/libril-qcril-hook-oem.so  lib/libwms.so \
                lib/libnv.so lib/libril_log.so lib/liblgerft.so \
                lib/liboem_rapi.so lib/libdss.so lib/libqmi.so lib/libmmgsdilib.so lib/libcm.so lib/liboncrpc.so lib/libdsm.so lib/libqueue.so \
 	       lib/libril-qc-1.so lib/libdiag.so lib/libgsdi_exp.so lib/libgsdi_exp.so lib/libgstk_exp.so lib/libwmsts.so lib/libpbmlib.so \
 	       lib/liblgeat.so lib/liblgdrm.so lib/libbcmwl.so lib/libauth.so /bin/port-bridge /bin/qmuxd
 
+#GPS
+PROPRIETARY += lib/libcommondefs.so lib/libgps.so lib/libloc.so  lib/libloc_api.so lib/libloc-rpc.so 
+
 #Wifi
 PROPRIETARY += etc/wl/rtecdc.bin etc/wl/nvram.txt etc/wl/rtecdc-mfgtest.bin lib/modules/wireless.ko bin/wl bin/wpa_supplicant
 
 #Linker
-PROPRIETARY += bin/linker
-PRODUCT_COPY_FILES += device/lg/swift/proprietary/linker:system/bin/linker
+PROPRIETARY += bin/linker bin/su
 
 #Bluetooth
 PROPRIETARY += bin/BCM4325D1_004.002.004.0262.0270.hcd lib/libbluetooth.so lib/libbluetoothd.so bin/bcmtool bin/btld bin/bluetoothd bin/brcm_patchram_plus lib/libbluedroid.so bin/hciattach bin/logwrapper

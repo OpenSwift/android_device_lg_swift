@@ -19,21 +19,22 @@
 
 <device name="Android">
   <item name="none">0</item>
-  <item name="screen.on">30</item>
-  <item name="bluetooth.active">103</item>
-  <item name="bluetooth.on">0.8</item>
+  <item name="screen.on">100</item>
+  <item name="bluetooth.active">142</item> <!-- In call -->
+  <item name="bluetooth.on">0.3</item>
   <!-- CPU wakelock held for 830ms on bluetooth headset at command. 43mA * 830 -->
   <item name="bluetooth.at">35690</item>
-  <item name="screen.full">114</item>
-  <item name="wifi.on">23</item>
-  <item name="wifi.active">200</item>
-  <item name="wifi.scan">200</item>
-  <item name="dsp.audio">70</item>
-  <item name="dsp.video">100</item>
-  <item name="radio.active">230</item>
-  <item name="gps.on">120</item>
+  <item name="screen.full">160</item>
+  <item name="wifi.on">4</item>
+  <item name="wifi.active">120</item>
+  <item name="wifi.scan">220</item>
+  <item name="dsp.audio">88</item>
+  <item name="dsp.video">88</item>
+  <item name="radio.active">300</item>
+  <item name="gps.on">170</item>
+  <item name="radio.scanning">70</item>
   <array name="radio.on"> <!-- Strength 0 to BINS-1 -->
-      <value>90</value>
+      <value>3</value>
       <value>3</value>
   </array>
   <array name="cpu.speeds">
@@ -41,13 +42,13 @@
       <value>122880</value>
       <value>128000</value>
       <value>245760</value>
-      <value>384000</value>
-      <value>528000</value>
+      <value>480000</value>
+      <value>600000</value>
   </array>
-  <!-- Power consumption when CPU is idle -->
+  <!-- Power consumption in suspend -->
   <item name="cpu.idle">1.7</item>
   <!-- Power consumption at different speeds -->
-  <array name="cpu.active">
+      <array name="cpu.active">
       <value>0</value>
       <value>0</value>
       <value>0</value>

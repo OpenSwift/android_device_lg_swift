@@ -24,6 +24,8 @@ PRODUCT_PACKAGES += \
     VoiceDialer \
     FM \
     LiveWallpapersPicker \
+    Launcher2 \
+    TSCalibration \
 
 PRODUCT_PROPERTY_OVERRIDES := \
     keyguard.no_require_sim=true \
@@ -55,24 +57,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Enable JIT by default
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.execution-mode=int:jit
-
+    dalvik.vm.heapsize=24m
 # The OpenGL ES API level that is natively supported by this device.
 # This is a 16.16 fixed point number
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.opengles.version=65536
-
-
-ifeq ($(TARGET_PREBUILT_KERNEL),)
-	LOCAL_KERNEL := device/lg/swift/kernel
-else
-	LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
-endif
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_KERNEL):kernel
-
-# stuff common to all HTC phones
-#$(call inherit-product, device/htc/common/common.mk)
+	ro.opengles.version=131072
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/generic.mk)
 

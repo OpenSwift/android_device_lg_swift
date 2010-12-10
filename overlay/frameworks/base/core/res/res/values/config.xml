@@ -20,15 +20,16 @@
 <!-- These resources are around just to allow their values to be customized
      for different hardware and product builds. -->
 <resources>
-    <!-- The 2d accelerator can't do an alpha transformation of
-         a surface with an alpha channel, so enable this special mode
-         to avoid going into software rendering. -->
-    <bool name="config_sf_limitedAlpha">true</bool>
-
+    <!-- Flag indicating whether the surface flinger has limited
+         alpha compositing functionality in hardware.  If set, the window
+         manager will disable alpha trasformation in animations where not
+         strictly needed. -->
+    <bool name="config_sf_limitedAlpha">false</bool>
+    
     <!-- Flag indicating whether the surface flinger is inefficient
          at performing a blur.  Used by parts of the UI to turn off
          the blur effect where it isn't worth the performance hit. -->
-    <bool name="config_sf_slowBlur">true</bool>
+    <bool name="config_sf_slowBlur">false</bool>
 
     <!-- The duration (in milliseconds) of a short animation. -->
     <integer name="config_shortAnimTime">100</integer>
@@ -73,8 +74,15 @@
          tethering on a new interface called "foo2" add <item>"foo\\d"</item> to the array -->
     <string-array translatable="false" name="config_tether_upstream_regexs">
         <item>"rmnet\\d"</item>
-        <item>"tiwlan\\d"</item>
+        <item>"wlan\\d"</item>
     </string-array>
+
+    <!-- List of regexpressions describing the interface (if any) that represent tetherable
+         Wifi interfaces.  If the device doesn't want to support tethering over Wifi this
+         should be empty.  An example would be "softap.*"
+    <string-array translatable="false" name="config_tether_wifi_regexs">
+ 	<item>"wl0.1"</item>
+    </string-array> --> 
 
     <!-- Boolean indicating if we require the use of DUN on mobile for tethering -->
     <bool translatable="false" name="config_tether_dun_required">false</bool>
@@ -86,6 +94,9 @@
 
     <!-- Control whether status bar should distinguish HSPA data icon form UMTS data icon on devices -->
     <bool name="config_hspa_data_distinguishable">true</bool>
+
+    <!-- Allow the menu hard key to be disabled in LockScreen on some devices -->
+    <bool name="config_disableMenuKeyInLockScreen">true</bool>
 
     <!-- Handle notifications differently if device only uses an amber/green
     LED. This also needs a liblights module that enables them accordingly. -->

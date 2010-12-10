@@ -15,18 +15,25 @@ TARGET_NO_KERNEL := true
 TARGET_NO_RADIO := true
 
 BOARD_WPA_SUPPLICANT_DRIVER := WEXT
-WPA_SUPPLICANT_VERSION      := VER_0_6_X
+WPA_SUPPLICANT_VERSION      := VER_0_5_X
 BOARD_WLAN_DEVICE           := bcm4325
 WIFI_DRIVER_MODULE_PATH     := "/system/lib/modules/wireless.ko"
 WIFI_DRIVER_FW_STA_PATH     := "/system/etc/wl/rtecdc.bin"
 WIFI_DRIVER_MODULE_ARG      := "firmware_path=/system/etc/wl/rtecdc.bin nvram_path=/system/etc/wl/nvram.txt"
 WIFI_DRIVER_MODULE_NAME     := "wireless"
 
+# Use HTC USB Function Switch to enable tethering via USB
+BOARD_USE_HTC_USB_FUNCTION_SWITCH := true
+
 BOARD_USES_OLD_CAMERA_HACK := true
+
+#BOARD_USES_ECLAIR_LIBCAMERA := true
+#USE_CAMERA_STUB := true
+
 BOARD_USES_QCOM_LIBS := true
 BOARD_USES_QCOM_HARDWARE := true
-BOARD_GL_TEX_POW2_DIMENSION_REQUIRED := true
-BOARD_NO_GL2 := true
+# BOARD_GL_TEX_POW2_DIMENSION_REQUIRED := true
+# BOARD_NO_GL2 := true
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_BCM := true
 BOARD_HAVE_FM_RADIO := true
@@ -38,6 +45,7 @@ USE_CAMERA_STUB := false
 TARGET_HARDWARE_3D := false
 BOARD_USES_GENERIC_AUDIO := false
 BOARD_USE_HTC_LIBSENSORS := false
+BOARD_USE_NASTY_PTHREAD_CREATE_HACK := true
 
 BOARD_EGL_CFG := device/lg/swift/egl.cfg
 
