@@ -14,54 +14,50 @@ LOCAL_SRC_FILES := proprietary/$(LOCAL_MODULE)
 OVERRIDE_BUILT_MODULE_PATH := $(TARGET_OUT_INTERMEDIATE_LIBRARIES)
 include $(BUILD_PREBUILT)
 
+
+
+
 #PRODUCT_COPY_FILES += \
-#	$(LOCAL_PATH)/proprietary/libmmjpeg.so:system/lib/libmmjpeg.so \
-#  	device/lg/swift/prebuilt/15checkgapps:system/etc/init.d/15checkgapps \
 #	device/lg/swift/prebuilt/AVRCP.kl:system/usr/keylayout/AVRCP.kll \
 #	device/lg/swift/prebuilt/swift.kl:system/usr/keylayout/swift.kl \
 #	device/lg/swift/prebuilt/qwerty.kl:system/usr/keylayout/qwerty.kl \
-#	device/lg/swift/prebuilt/dhcpcd.conf:system/etc/dhcpcd/dhcpcd.conf
-#   $(LOCAL_PATH)/proprietary/libomx_wmadec_sharedlibrary.so:system/lib/libomx_wmadec_sharedlibrary.so\
-#   $(LOCAL_PATH)/proprietary/libomx_wmvdec_sharedlibrary.so:system/lib/libomx_wmvdec_sharedlibrary.so
 
 # Install the features available on this device.
 
 
-
-# media configuration xml file
-
 ## OMX proprietaries
 PRODUCT_COPY_FILES += \
-    device/lg/swift/proprietary/omx/libmm-adspsvc.so:system/lib/libmm-adspsvc.so \
-    device/lg/swift/proprietary/omx/libOmxH264Dec.so:system/lib/libOmxH264Dec.so \
-    device/lg/swift/proprietary/omx/libOmxVidEnc.so:system/lib/libOmxVidEnc.so \
-    device/lg/swift/proprietary/omx/libOmxMpeg4Dec.so:system/lib/libOmxMpeg4Dec.so \
-    device/lg/swift/proprietary/omx/libomx_wmadec_sharedlibrary.so:system/lib/libomx_wmadec_sharedlibrary.so \
-    device/lg/swift/proprietary/omx/libomx_wmvdec_sharedlibrary.so:system/lib/libomx_wmvdec_sharedlibrary.so 
-
-#device/lg/swift/proprietary/omx/libOmxCore.so:system/lib/libOmxCore.so \
-#device/lg/swift/proprietary/omx/libmm-omxcore.so:system/lib/libmm-omxcore.so \
-#device/lg/swift/proprietary/omx/libOmxAacDec.so:system/lib/libOmxAacDec.so \
-#device/lg/swift/proprietary/omx/llibOmxAmrDec.so:system/lib/libOmxAmrDec.so \
-#device/lg/swift/proprietary/omx/libOmxAmrEnc.so:system/lib/libOmxAmrEnc.so \
-#device/lg/swift/proprietary/omx/libOmxAmrRtpDec.so:system/lib/libOmxAmrRtpDec.so \
-#device/lg/swift/proprietary/omx/libOmxAmrwbDec.so:system/lib/libOmxAmrwbDec.so \
-#device/lg/swift/proprietary/omx/ibOmxEvrcDec.so:system/lib/libOmxEvrcDec.so \
-#device/lg/swift/proprietary/omx/libOmxEvrcEnc.so:system/lib/libOmxEvrcEnc.so \
-#device/lg/swift/proprietary/omx/libOmxAacEnc.so:system/lib/libOmxAacEnc.so \
-#device/lg/swift/proprietary/omx/llibOmxMp3Dec.so:system/lib/libOmxMp3Dec.so \
-#device/lg/swift/proprietary/omx/libOmxQcelp13Enc.so:system/lib/libOmxQcelp13Enc.so \
-#device/lg/swift/proprietary/omx/libOmxQcelpDec.so:system/lib/libOmxQcelpDec.so \
-#device/lg/swift/proprietary/omx/libOmxWmaDec.so:system/lib/libOmxWmaDec.so \
-#device/lg/swift/proprietary/omx/llibOmxWmvDec.so:system/lib/libOmxWmvDec.so
+        device/lg/swift/proprietary/omx/libmm-adspsvc.so:system/lib/libmm-adspsvc.so \
+        device/lg/swift/proprietary/omx/libOmxH264Dec.so:system/lib/libOmxH264Dec.so \
+        device/lg/swift/proprietary/omx/libOmxVidEnc.so:system/lib/libOmxVidEnc.so \
+        device/lg/swift/proprietary/omx/libOmxMpeg4Dec.so:system/lib/libOmxMpeg4Dec.so \
+        device/lg/swift/proprietary/omx/libomx_wmadec_sharedlibrary.so:system/lib/libomx_wmadec_sharedlibrary.so \
+        device/lg/swift/proprietary/omx/libomx_wmvdec_sharedlibrary.so:system/lib/libomx_wmvdec_sharedlibrary.so  \
+	device/lg/swift/proprietary/omx/libOmxCore.so:system/lib/libOmxCore.so \
+	device/lg/swift/proprietary/omx/libmm-omxcore.so:system/lib/libmm-omxcore.so \
+	device/lg/swift/proprietary/omx/libOmxAacDec.so:system/lib/libOmxAacDec.so \
+	device/lg/swift/proprietary/omx/libOmxAmrEnc.so:system/lib/libOmxAmrEnc.so \
+	device/lg/swift/proprietary/omx/libOmxAmrRtpDec.so:system/lib/libOmxAmrRtpDec.so \
+	device/lg/swift/proprietary/omx/libOmxAmrwbDec.so:system/lib/libOmxAmrwbDec.so \
+	device/lg/swift/proprietary/omx/ibOmxEvrcDec.so:system/lib/libOmxEvrcDec.so \
+	device/lg/swift/proprietary/omx/libOmxEvrcEnc.so:system/lib/libOmxEvrcEnc.so \
+	device/lg/swift/proprietary/omx/libOmxAacEnc.so:system/lib/libOmxAacEnc.so \
+	device/lg/swift/proprietary/omx/llibOmxMp3Dec.so:system/lib/libOmxMp3Dec.so \
+	device/lg/swift/proprietary/omx/libOmxQcelp13Enc.so:system/lib/libOmxQcelp13Enc.so \
+	device/lg/swift/proprietary/omx/libOmxQcelpDec.so:system/lib/libOmxQcelpDec.so \
+	device/lg/swift/proprietary/omx/libOmxWmaDec.so:system/lib/libOmxWmaDec.so \
+	device/lg/swift/proprietary/libsurfaceflinger.so:system/lib/libsurfaceflinger.so \
+	device/lg/swift/proprietary/omx/llibOmxWmvDec.so:system/lib/libOmxWmvDec.so \
+	device/lg/swift/proprietary/omx/libaomx_mp4dec_sharedlibrary.so:system/lib/libaomx_mp4dec_sharedlibrary.so \
+	device/lg/swift/proprietary/omx/libaomx_mp3dec_sharedlibrary.so:system/lib/libaomx_mp3dec_sharedlibrary.so
 
 ## Camera proprietaries
 PRODUCT_COPY_FILES += \
-    device/lg/swift/proprietary/liboemcamera.so:system/lib/liboemcamera.so \
-    device/lg/swift/proprietary/libmmjpeg.so:system/lib/libmmjpeg.so \
-    device/lg/swift/proprietary/libmmipl.so:system/lib/libmmipl.so \
-    device/lg/swift/proprietary/libcamera.so:obj/lib/libcamera.so \
-    device/lg/swift/proprietary/libcamera.so:system/lib/libcamera.so  
+device/lg/swift/proprietary/liboemcamera.so:system/lib/liboemcamera.so \
+device/lg/swift/proprietary/libmmjpeg.so:system/lib/libmmjpeg.so \
+device/lg/swift/proprietary/libmmipl.so:system/lib/libmmipl.so \
+device/lg/swift/proprietary/libcamera.so:obj/lib/libcamera.so \
+device/lg/swift/proprietary/libcamera.so:system/lib/libcamera.so  
 
 PRODUCT_COPY_FILES += \
     device/lg/swift/media_profiles.xml:/system/etc/media_profiles.xml \
@@ -84,6 +80,10 @@ PRODUCT_COPY_FILES += \
     device/lg/swift/proprietary/akmd2:system/bin/akmd2  \
     device/lg/swift/prebuilt/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
     
+# Copy DS specific prebuilt files
+PRODUCT_COPY_FILES +=  \
+    vendor/cyanogen/prebuilt/mdpi/media/bootanimation.zip:system/media/bootanimation.zip
+
 # device/lg/swift/proprietary/lgdrmserver:system/bin/lgdrmserver 
 # device/lg/swift/proprietary/lgesystemd:system/bin/lgesystemd 
 
@@ -101,7 +101,7 @@ PROPRIETARY += lib/libcommondefs.so lib/libgps.so lib/libloc.so  lib/libloc_api.
 PROPRIETARY += etc/wl/rtecdc.bin etc/wl/nvram.txt etc/wl/rtecdc-mfgtest.bin lib/modules/wireless.ko bin/wl bin/wpa_supplicant
 
 #Linker
-PROPRIETARY += bin/linker bin/su
+PROPRIETARY += bin/linker
 
 #Bluetooth
 PROPRIETARY += bin/BCM4325D1_004.002.004.0262.0270.hcd lib/libbluetooth.so lib/libbluetoothd.so bin/bcmtool bin/btld bin/bluetoothd bin/brcm_patchram_plus lib/libbluedroid.so bin/hciattach bin/logwrapper
@@ -111,6 +111,7 @@ PROPRIETARY += lib/egl/libEGL_adreno200.so lib/egl/libGLESv2_adreno200.so lib/eg
 
 #HW
 PROPRIETARY += lib/hw/copybit.msm7k.so lib/hw/gralloc.default.so lib/hw/gralloc.msm7k.so lib/hw/lights.swift.so lib/hw/sensors.swift.so
+
 
 PRODUCT_COPY_FILES += $(foreach i,$(PROPRIETARY),$(LOCAL_PATH)/proprietary/$(notdir $i):system/$i)
 
