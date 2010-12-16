@@ -24,9 +24,7 @@ include $(BUILD_PREBUILT)
 
 
 #PRODUCT_COPY_FILES += \
-#	device/lg/swift/prebuilt/AVRCP.kl:system/usr/keylayout/AVRCP.kll \
-#	device/lg/swift/prebuilt/swift.kl:system/usr/keylayout/swift.kl \
-#	device/lg/swift/prebuilt/qwerty.kl:system/usr/keylayout/qwerty.kl \
+
 
 # Install the features available on this device.
 
@@ -69,8 +67,17 @@ PRODUCT_COPY_FILES += \
     device/lg/swift/media_profiles.xml:/system/etc/media_profiles.xml \
     device/lg/swift/prebuilt/AutoVolumeControl.txt:system/etc/AutoVolumeControl.txt \
     device/lg/swift/prebuilt/AudioFilter.csv:system/etc/AudioFilter.csv \
-    device/lg/swift/prebuilt/apns-conf.xml:system/etc/apns-conf.xml  \
-    device/lg/swift/prebuilt/dhcpcd.conf:system/etc/dhcpcd/dhcpcd.conf 
+    device/lg/swift/prebuilt/apns-conf.xml:system/etc/apns-conf.xml \
+    device/lg/swift/prebuilt/dhcpcd.conf:system/etc/dhcpcd/dhcpcd.conf  \
+    device/lg/swift/prebuilt/qwerty.kcm.bin:system/usr/keychars/qwerty.kcm.bin \
+    device/lg/swift/prebuilt/msm_touchscreen.kcm.bin:system/usr/keychars/msm_touchscreen.kcm.bin \
+    device/lg/swift/prebuilt/qwerty2.kcm.bin:system/usr/keychars/qwerty2.kcm.bin \
+    device/lg/swift/prebuilt/AVRCP.kl:system/usr/keylayout/AVRCP.kll \
+    device/lg/swift/prebuilt/swift.kl:system/usr/keylayout/swift.kl \
+    device/lg/swift/prebuilt/qwerty.kl:system/usr/keylayout/qwerty.kl \
+    device/lg/swift/prebuilt/qwerty.kl:system/usr/keylayout/swift_keypad.kcm.bin
+
+
 
 PRODUCT_COPY_FILES += \
     frameworks/base/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
@@ -85,6 +92,8 @@ PRODUCT_COPY_FILES += \
     device/lg/swift/prebuilt/yamato_pm4.fw:system/etc/firmware/yamato_pm4.fw \
     device/lg/swift/proprietary/akmd2:system/bin/akmd2  \
     device/lg/swift/prebuilt/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
+
+
     
 # Copy DS specific prebuilt files
 PRODUCT_COPY_FILES +=  \
@@ -105,7 +114,7 @@ PROPRIETARY += lib/libcommondefs.so lib/libgps.so lib/libloc.so  lib/libloc_api.
 PROPRIETARY += etc/wl/rtecdc.bin etc/wl/nvram.txt etc/wl/rtecdc-mfgtest.bin lib/modules/wireless.ko bin/wl bin/wpa_supplicant
 
 #Linker
-PROPRIETARY += bin/linker
+PROPRIETARY += bin/linker bin/lgesystemd  bin/lgdrmserver
 
 #Bluetooth
 PROPRIETARY += bin/BCM4325D1_004.002.004.0262.0270.hcd lib/libbluetooth.so lib/libbluetoothd.so bin/bcmtool bin/btld bin/bluetoothd bin/brcm_patchram_plus lib/libbluedroid.so bin/hciattach bin/logwrapper
