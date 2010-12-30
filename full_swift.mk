@@ -22,16 +22,16 @@ DEVICE_PACKAGE_OVERLAYS := device/lg/swift/overlay
 
 PRODUCT_PACKAGES += \
     VoiceDialer \
-    FM \
     LiveWallpapersPicker \
-    Launcher2 \
+    Launcher2 
 
-PRODUCT_PROPERTY_OVERRIDES := \
+PRODUCT_PROPERTY_OVERRIDES += \
     keyguard.no_require_sim=true \
     ro.ril.hsxpa=1 \
     ro.ril.gprsclass=10 \
     ro.media.dec.jpeg.memcap=10000000 \
-	ro.setupwizard.enable_bypass=1
+    ro.com.android.dataroaming=false \
+    ro.setupwizard.enable_bypass=1
 
 PRODUCT_PROPERTY_OVERRIDES += \
     rild.libpath=/system/lib/libril-qc-1.so \
