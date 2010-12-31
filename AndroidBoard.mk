@@ -60,8 +60,8 @@ PRODUCT_COPY_FILES += \
 device/lg/swift/proprietary/liboemcamera.so:system/lib/liboemcamera.so \
 device/lg/swift/proprietary/libmmjpeg.so:system/lib/libmmjpeg.so \
 device/lg/swift/proprietary/libmmipl.so:system/lib/libmmipl.so \
-device/lg/swift/proprietary/libcamera.so:obj/lib/libcamera.so \
-device/lg/swift/proprietary/libcamera.so:system/lib/libcamera.so  
+#device/lg/swift/proprietary/libcamera.so:obj/lib/libcamera.so \
+#device/lg/swift/proprietary/libcamera.so:system/lib/libcamera.so  
 
 PRODUCT_COPY_FILES += \
     device/lg/swift/media_profiles.xml:/system/etc/media_profiles.xml \

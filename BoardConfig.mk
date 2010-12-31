@@ -25,8 +25,6 @@ WIFI_DRIVER_MODULE_NAME     := "wireless"
 # Use HTC USB Function Switch to enable tethering via USB
 BOARD_USE_HTC_USB_FUNCTION_SWITCH := true
 
-BUILD_OLD_LIBCAMERA := true
-
 #BOARD_USES_OLD_CAMERA_HACK := true
 #BOARD_USES_ECLAIR_LIBCAMERA := true
 USE_CAMERA_STUB := false
