@@ -1,29 +1,30 @@
-#
-# Copyright (C) 2008 The Android Open Source Project
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#      http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-#
+#Adding ALL Languages
+
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 # The gps config appropriate for this device
 $(call inherit-product, device/common/gps/gps_us_supl.mk)
 
-DEVICE_PACKAGE_OVERLAYS := device/lg/swift/overlay
+# Used by BusyBox
+KERNEL_MODULES_DIR:=/system/lib/modules
 
+include frameworks/base/data/sounds/AudioPackage4.mk
+
+DEVICE_PACKAGE_OVERLAYS += device/lg/swift/overlay
+    
 PRODUCT_PACKAGES += \
     VoiceDialer \
     LiveWallpapersPicker \
-    Launcher2 
+    Launcher2 \
+    CMParts \
+    CMPartsHelper \
+    CMWallpapers \
+    DSPManager \
+    Provision \
+    GoogleSearch \
+    LatinIME \
+    Stk \
+    Superuser
 
 PRODUCT_PROPERTY_OVERRIDES += \
     keyguard.no_require_sim=true \
@@ -31,8 +32,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.ril.gprsclass=10 \
     ro.media.dec.jpeg.memcap=10000000 \
     ro.com.android.dataroaming=false \
-    ro.setupwizard.enable_bypass=1
+    ro.setupwizard.enable_bypass=1 \
+    ro.com.android.dateformat=MM-dd-yyyy \
+    ro.rommanager.developerid=cyanogenmod \
+    ro.config.ringtone=DonMessWivIt.ogg
 
+# Wifi and GSM
 PRODUCT_PROPERTY_OVERRIDES += \
     rild.libpath=/system/lib/libril-qc-1.so \
     wifi.interface=wlan0
@@ -42,6 +47,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # but none are in range.
 PRODUCT_PROPERTY_OVERRIDES += \
     wifi.supplicant_scan_interval=15
+
+# Enable Compcache by default on D/S
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.compcache.default=0
 
 # density in DPI of the LCD of this board. This is used to scale the UI
 # appropriately. If this property is not defined, the default value is 160 dpi. 

@@ -1,4 +1,4 @@
-#ifeq ($(TARGET_BOOTLOADER_BOARD_NAME),z71)
+ifeq ($(TARGET_PRODUCT_NAME),full_swift)
 
 # When zero we link against libmmcamera; when 1, we dlopen libmmcamera.
 DLOPEN_LIBMMCAMERA:=1
@@ -29,5 +29,4 @@ endif
 
 LOCAL_MODULE:= libcamera
 include $(BUILD_SHARED_LIBRARY)
-
-#endif
+endif

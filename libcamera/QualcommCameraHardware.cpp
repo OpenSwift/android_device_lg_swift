@@ -303,9 +303,9 @@ static const int PICTURE_FORMAT_RAW = 2;
 static const str_map whitebalance[] = {
     { CameraParameters::WHITE_BALANCE_AUTO,            CAMERA_WB_AUTO },
     { CameraParameters::WHITE_BALANCE_INCANDESCENT,    CAMERA_WB_INCANDESCENT },
-//    { CameraParameters::WHITE_BALANCE_SUNNY,            CAMERA_WB_SUNNY },
+    { CameraParameters::WHITE_BALANCE_SUNNY,            CAMERA_WB_SUNNY },
     { CameraParameters::WHITE_BALANCE_FLUORESCENT,     CAMERA_WB_FLUORESCENT },
-//    { CameraParameters::WHITE_BALANCE_CLOUDY,            CAMERA_WB_CLOUDY },
+    { CameraParameters::WHITE_BALANCE_CLOUDY,            CAMERA_WB_CLOUDY }
 };
 
 // from  isx005.c iss005 - ок
@@ -314,10 +314,10 @@ static const str_map effects[] = {
     { CameraParameters::EFFECT_MONO,       CAMERA_EFFECT_MONO }, 
     { CameraParameters::EFFECT_SEPIA,      CAMERA_EFFECT_SEPIA }, 
     { CameraParameters::EFFECT_NEGATIVE,   CAMERA_EFFECT_NEGATIVE }, 
-  //  { CameraParameters::EFFECT_NEGATIVE_SEPIA,   CAMERA_EFFECT_NEGATIVE_SEPIA }, 
-  //  { CameraParameters::EFFECT_BLUE,  CAMERA_EFFECT_BLUE },
-    //{ CameraParameters::EFFECT_SOLARIZE, CAMERA_SOLARIZE },
-    //{ CameraParameters::EFFECT_PASTEL, CAMERA_EFFECT_PASTEL },
+    { CameraParameters::EFFECT_NEGATIVE_SEPIA,   CAMERA_EFFECT_NEGATIVE_SEPIA }, 
+    { CameraParameters::EFFECT_BLUE,  CAMERA_EFFECT_BLUE },
+    { CameraParameters::EFFECT_SOLARIZE, CAMERA_EFFECT_SOLARIZE },
+    { CameraParameters::EFFECT_PASTEL, CAMERA_EFFECT_PASTEL }
 };
 
 // from qcamera/common/camera.h - TODO isx005 0 not present
@@ -1047,7 +1047,7 @@ void QualcommCameraHardware::initDefaultParameters()
             thumbnail_sizes[DEFAULT_THUMBNAIL_SETTING].width;
     mDimension.ui_thumbnail_height =
             thumbnail_sizes[DEFAULT_THUMBNAIL_SETTING].height;
-    mParameters.set(CameraParameters::KEY_JPEG_THUMBNAIL_QUALITY, "98");
+    mParameters.set(CameraParameters::KEY_JPEG_THUMBNAIL_QUALITY, "100");
 
     mParameters.set(CameraParameters::KEY_ANTIBANDING,
                     CameraParameters::ANTIBANDING_OFF);
@@ -1113,7 +1113,7 @@ void QualcommCameraHardware::initDefaultParameters()
 
     mParameters.set("luma-adaptation", "6");
     mParameters.set("zoom-supported", "true");
-    //mParameters.set("zoom-ratios", "100,200,300,400,500,600");
+    mParameters.set("zoom-ratios", "100,200,300,400,500,600");
     mParameters.set("max-zoom", MAX_ZOOM_LEVEL); // must be 15
     //mParameters.set("zoom", 0);
     mParameters.set(CameraParameters::KEY_PICTURE_FORMAT,
