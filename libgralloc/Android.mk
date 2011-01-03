@@ -1,4 +1,4 @@
-ifeq ($(TARGET_PRODUCT_NAME),full_swift)
+ifeq ($(TARGET_BOOTLOADER_BOARD_NAME), swift)
 # Copyright (C) 2008 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
