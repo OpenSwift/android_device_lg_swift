@@ -1,4 +1,4 @@
-ifeq ($(TARGET_PRODUCT_NAME),full_swift)
+ifeq ($(TARGET_BOOTLOADER_BOARD_NAME), swift)
 
 # When zero we link against libmmcamera; when 1, we dlopen libmmcamera.
 DLOPEN_LIBMMCAMERA:=1
