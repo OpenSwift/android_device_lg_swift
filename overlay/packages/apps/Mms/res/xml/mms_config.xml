@@ -22,16 +22,15 @@
 -->
 
 <mms_config version="4">
-    <!-- Maximum message size in bytes for a MMS message -->
-    <int name="maxMessageSize">0307200</int>
-
-    <!-- Maximum height for an attached image -->
-    <int name="maxImageHeight">0768</int>
-
-    <!-- Maximum width for an attached image -->
-    <int name="maxImageWidth">1024</int>
-
-    <!-- UAProf URL -->
-    <string name="uaProfUrl">http://www.htcmms.com.tw/Android/Common/sapphire/ua-profile.xml</string>
-
+    <bool name="enabledMMS">true</bool>
+    <int name="maxMessageSize">1048576</int>
+    <int name="maxImageHeight">480</int>
+    <int name="maxImageWidth">640</int>
+    <int name="defaultSMSMessagesPerThread">200</int>
+    <int name="defaultMMSMessagesPerThread">20</int>
+    <int name="minMessageCountPerThread">10</int>
+    <int name="maxMessageCountPerThread">5000</int>
+    <string name="uaProfUrl">http://www.google.com/oha/rdf/ua-profile-kila.xml</string>
+    <int name="recipientLimit">20</int>
+    <int name="smsToMmsTextThreshold">4</int>
 </mms_config>

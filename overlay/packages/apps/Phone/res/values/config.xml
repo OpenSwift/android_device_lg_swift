@@ -20,7 +20,10 @@
          This fixes openetna issue 227 -->
     <bool name="ignore_sim_network_locked_events">true</bool>
 
-   <!--   <bool name="allow_incoming_call_touch_ui">true</bool>
-    <bool name="allow_in_call_touch_ui">true</bool> -->
+ <!--   <bool name="allow_incoming_call_touch_ui">true</bool>
+    <bool name="allow_in_call_touch_ui">true</bool>-->
     <bool name="send_mic_mute_to_AudioManager">true</bool>
+
+    <!-- Flag indicating if the tty is enabled -->
+    <bool name="tty_enabled">true</bool>
 </resources>
