@@ -350,7 +350,7 @@ int mapFrameBufferLocked(struct private_module_t* module)
     /*
      * Explicitly request 5/6/5
      */
-    info.bits_per_pixel = 24;
+    info.bits_per_pixel = 16;
     info.red.offset     = 11;
     info.red.length     = 5;
     info.green.offset   = 5;
