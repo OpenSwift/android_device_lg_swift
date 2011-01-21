@@ -24,6 +24,10 @@ DEVICE_PACKAGE_OVERLAYS += device/lg/swift/overlay
     
 PRODUCT_PACKAGES += \
     VoiceDialer \
+    LiveWallpapers \
+    LiveWallpapersPicker \
+    MagicSmokeWallpapers \
+    VisualizationWallpapers \
     LiveWallpapersPicker \
     Launcher2 \
     CMParts \
@@ -32,7 +36,6 @@ PRODUCT_PACKAGES += \
     DSPManager \
     Provision \
     GoogleSearch \
-    LiveWallpapers \
     LatinIME \
     Stk \
     copybit.swift \
