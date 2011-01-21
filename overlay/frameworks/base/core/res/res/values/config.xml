@@ -31,6 +31,9 @@
          the blur effect where it isn't worth the performance hit. -->
     <bool name="config_sf_slowBlur">false</bool>
 
+    <!-- Display low battery warning when battery level dips to this value -->
+    <integer name="config_lowBatteryWarningLevel">10</integer>
+
     <!-- The duration (in milliseconds) of a short animation. -->
     <integer name="config_shortAnimTime">100</integer>
 
