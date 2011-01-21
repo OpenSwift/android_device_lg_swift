@@ -350,7 +350,7 @@ int mapFrameBufferLocked(struct private_module_t* module)
     /*
      * Explicitly request 5/6/5
      */
-    info.bits_per_pixel = 16;
+    info.bits_per_pixel = 24;
     info.red.offset     = 11;
     info.red.length     = 5;
     info.green.offset   = 5;
@@ -416,7 +416,8 @@ int mapFrameBufferLocked(struct private_module_t* module)
 
     float xdpi = (info.xres * 25.4f) / info.width;
     float ydpi = (info.yres * 25.4f) / info.height;
-    float fps  = refreshRate / 1000.0f;
+//    float fps  = refreshRate / 1000.0f;
+    float fps  = 0;
 
     LOGI(   "using (fd=%d)\n"
             "id           = %s\n"

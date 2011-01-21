@@ -303,9 +303,9 @@ static const int PICTURE_FORMAT_RAW = 2;
 static const str_map whitebalance[] = {
     { CameraParameters::WHITE_BALANCE_AUTO,            CAMERA_WB_AUTO },
     { CameraParameters::WHITE_BALANCE_INCANDESCENT,    CAMERA_WB_INCANDESCENT },
-    { CameraParameters::WHITE_BALANCE_SUNNY,            CAMERA_WB_SUNNY },
-    { CameraParameters::WHITE_BALANCE_FLUORESCENT,     CAMERA_WB_FLUORESCENT },
-    { CameraParameters::WHITE_BALANCE_CLOUDY,            CAMERA_WB_CLOUDY }
+ //   { CameraParameters::WHITE_BALANCE_SUNNY,            CAMERA_WB_SUNNY },
+    { CameraParameters::WHITE_BALANCE_FLUORESCENT,     CAMERA_WB_FLUORESCENT }
+ //   { CameraParameters::WHITE_BALANCE_CLOUDY,            CAMERA_WB_CLOUDY }
 };
 
 // from  isx005.c iss005 - ок
@@ -314,10 +314,10 @@ static const str_map effects[] = {
     { CameraParameters::EFFECT_MONO,       CAMERA_EFFECT_MONO }, 
     { CameraParameters::EFFECT_SEPIA,      CAMERA_EFFECT_SEPIA }, 
     { CameraParameters::EFFECT_NEGATIVE,   CAMERA_EFFECT_NEGATIVE }, 
-    { CameraParameters::EFFECT_NEGATIVE_SEPIA,   CAMERA_EFFECT_NEGATIVE_SEPIA }, 
-    { CameraParameters::EFFECT_BLUE,  CAMERA_EFFECT_BLUE },
-    { CameraParameters::EFFECT_SOLARIZE, CAMERA_EFFECT_SOLARIZE },
-    { CameraParameters::EFFECT_PASTEL, CAMERA_EFFECT_PASTEL }
+    //{ CameraParameters::EFFECT_NEGATIVE_SEPIA,   CAMERA_EFFECT_NEGATIVE_SEPIA }, 
+   // { CameraParameters::EFFECT_BLUE,  CAMERA_EFFECT_BLUE },
+    { CameraParameters::EFFECT_SOLARIZE, CAMERA_EFFECT_SOLARIZE }
+ //   { CameraParameters::EFFECT_PASTEL, CAMERA_EFFECT_PASTEL }
 };
 
 // from qcamera/common/camera.h - TODO isx005 0 not present

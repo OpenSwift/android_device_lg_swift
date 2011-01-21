@@ -7,6 +7,8 @@ LOCAL_MODULE := vold.fstab
 LOCAL_SRC_FILES := $(LOCAL_MODULE)
 include $(BUILD_PREBUILT)
 
+ALL_PREBUILT += $(INSTALLED_KERNEL_TARGET)
+
 # Install the features available on this device.
 ## OMX proprietaries
 PRODUCT_COPY_FILES += \
@@ -39,6 +41,7 @@ device/lg/swift/proprietary/libmmipl.so:system/lib/libmmipl.so
 
 PRODUCT_COPY_FILES += \
     device/lg/swift/media_profiles.xml:/system/etc/media_profiles.xml \
+    device/lg/swift/vold.fstab:/system/etc/vold.fstab \
     device/lg/swift/prebuilt/AutoVolumeControl.txt:system/etc/AutoVolumeControl.txt \
     device/lg/swift/prebuilt/AudioFilter.csv:system/etc/AudioFilter.csv \
     device/lg/swift/prebuilt/apns-conf.xml:system/etc/apns-conf.xml \
@@ -82,7 +85,7 @@ PROPRIETARY += lib/liblgdrmwbxml.so lib/libdll.so lib/libril-qcril-hook-oem.so  
 PROPRIETARY += lib/libcommondefs.so lib/libgps.so lib/libloc.so  lib/libloc_api.so lib/libloc-rpc.so 
 
 #Wifi
-PROPRIETARY += etc/wl/rtecdc.bin etc/wl/nvram.txt etc/wl/rtecdc-mfgtest.bin etc/wifi/wpa_supplicant.conf lib/modules/wireless.ko bin/wl bin/wpa_supplicant 
+PROPRIETARY += etc/wl/rtecdc.bin etc/wl/nvram.txt etc/wl/rtecdc-mfgtest.bin etc/wifi/wpa_supplicant.conf  lib/modules/wireless.ko bin/wl bin/wpa_supplicant 
 
 #Linker
 PROPRIETARY += bin/linker #bin/lgesystemd  bin/lgdrmserver
@@ -94,7 +97,6 @@ PROPRIETARY += bin/BCM4325D1.hcd
 PROPRIETARY += lib/egl/libEGL_adreno200.so lib/egl/libGLESv2_adreno200.so lib/egl/libGLESv1_CM_adreno200.so lib/egl/libq3dtools_adreno200.so lib/libgsl.so
 
 #HW
-PROPRIETARY +=  lib/hw/lights.swift.so
-# lib/hw/sensors.swift.so
+PROPRIETARY +=  lib/hw/lights.swift.so lib/hw/sensors.swift.so
 
 PRODUCT_COPY_FILES += $(foreach i,$(PROPRIETARY),$(LOCAL_PATH)/proprietary/$(notdir $i):system/$i)

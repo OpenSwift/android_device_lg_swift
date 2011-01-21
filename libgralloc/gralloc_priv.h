@@ -28,7 +28,6 @@
 #include <cutils/native_handle.h>
 
 #include <linux/fb.h>
-
 /*****************************************************************************/
 #ifdef __cplusplus
 template <class T>

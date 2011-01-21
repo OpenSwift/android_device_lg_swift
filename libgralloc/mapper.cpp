@@ -308,21 +308,12 @@ int gralloc_unlock(gralloc_module_t const* module,
     } while (android_atomic_cmpxchg(current_value, new_value, 
             (volatile int32_t*)&hnd->lockState));
 
-    // If this was locked for a software write, send an ioctl to flush the cache
-     // if ( hnd->swWrite == 1) {
-     //     if (hnd->flags & private_handle_t::PRIV_FLAGS_USES_PMEM) {
-             struct pmem_addr pmem_addr;
-              pmem_addr.vaddr = hnd->base;
-              pmem_addr.offset = hnd->offset;
-              pmem_addr.length = hnd->size;
-              ioctl( hnd->fd, PMEM_CLEAN_CACHES,  &pmem_addr);
-       //   } else if ((hnd->flags & private_handle_t::PRIV_FLAGS_USES_ASHMEM) {
-            unsigned long addr = hnd->base + hnd->offset;
-          //    if(ioctl(hnd->fd, ASHMEM_CACHE_CLEAN_RANGE, NULL)) {
-           //       LOGE("ASHMEM_CACHE_CLEAN_RANGE ioctl failed (%s)", strerror(errno));
-        //      }
-       //   }
-    //  }
+            struct pmem_addr pmem_addr;
+            pmem_addr.vaddr = hnd->base;
+            pmem_addr.offset = hnd->offset;
+            pmem_addr.length = hnd->size;
+            ioctl( hnd->fd, PMEM_CLEAN_CACHES,  &pmem_addr);
+
 
     return 0;
 }
