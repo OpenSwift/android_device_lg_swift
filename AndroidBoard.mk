@@ -1,10 +1,5 @@
-LOCAL_PATH := $(call my-dir)
 USE_CAMERA_STUB := false
 include $(CLEAR_VARS)
-LOCAL_MODULE_CLASS := ETC
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE := vold.fstab
-LOCAL_SRC_FILES := $(LOCAL_MODULE)
 include $(BUILD_PREBUILT)
 
 ALL_PREBUILT += $(INSTALLED_KERNEL_TARGET)
@@ -40,8 +35,8 @@ device/lg/swift/proprietary/libmmjpeg.so:system/lib/libmmjpeg.so \
 device/lg/swift/proprietary/libmmipl.so:system/lib/libmmipl.so 
 
 PRODUCT_COPY_FILES += \
-    device/lg/swift/media_profiles.xml:/system/etc/media_profiles.xml \
-    device/lg/swift/vold.fstab:/system/etc/vold.fstab \
+    device/lg/swift/prebuilt/media_profiles.xml:/system/etc/media_profiles.xml \
+    device/lg/swift/prebuilt/vold.fstab:/system/etc/vold.fstab \
     device/lg/swift/prebuilt/AutoVolumeControl.txt:system/etc/AutoVolumeControl.txt \
     device/lg/swift/prebuilt/AudioFilter.csv:system/etc/AudioFilter.csv \
     device/lg/swift/prebuilt/apns-conf.xml:system/etc/apns-conf.xml \
