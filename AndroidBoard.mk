@@ -85,7 +85,7 @@ PROPRIETARY += lib/liblgdrmwbxml.so lib/libdll.so lib/libril-qcril-hook-oem.so  
 PROPRIETARY += lib/libcommondefs.so lib/libgps.so lib/libloc.so  lib/libloc_api.so lib/libloc-rpc.so 
 
 #Wifi
-PROPRIETARY += etc/wl/rtecdc.bin etc/wl/nvram.txt etc/wl/rtecdc-mfgtest.bin etc/wifi/wpa_supplicant.conf  lib/modules/wireless.ko bin/wl bin/wpa_supplicant 
+PROPRIETARY += etc/wl/rtecdc.bin etc/wl/nvram.txt etc/wl/rtecdc-mfgtest.bin etc/wifi/wpa_supplicant.conf bin/wl bin/wpa_supplicant 
 
 #Linker
 PROPRIETARY += bin/linker #bin/lgesystemd  bin/lgdrmserver
