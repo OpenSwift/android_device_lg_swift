@@ -49,19 +49,14 @@ PRODUCT_COPY_FILES += \
     device/lg/swift/prebuilt/qwerty.kcm.bin:system/usr/keychars/qwerty.kcm.bin \
     device/lg/swift/prebuilt/msm_touchscreen.kcm.bin:system/usr/keychars/msm_touchscreen.kcm.bin \
     device/lg/swift/prebuilt/qwerty2.kcm.bin:system/usr/keychars/qwerty2.kcm.bin \
-    device/lg/swift/prebuilt/AVRCP.kl:system/usr/keylayout/AVRCP.kll \
-    device/lg/swift/prebuilt/swift.kl:system/usr/keylayout/swift.kl \
-    device/lg/swift/prebuilt/qwerty.kl:system/usr/keylayout/qwerty.kl \
-    device/lg/swift/prebuilt/qwerty.kl:system/usr/keylayout/swift_keypad.kcm.bin \
-    vendor/cyanogen/prebuilt/common/bin/handle_compcache:system/bin/handle_compcache \
-    vendor/cyanogen/prebuilt/common/bin/compcache:system/bin/compcache 
+    device/lg/swift/prebuilt/AVRCP.kl:system/usr/keylayout/AVRCP.kll 
 
 PRODUCT_COPY_FILES += \
     frameworks/base/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
     frameworks/base/data/etc/android.hardware.camera.autofocus.xml:system/etc/permissions/android.hardware.camera.autofocus.xml \
     frameworks/base/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml \
     frameworks/base/data/etc/android.hardware.location.gps.xml:system/etc/permissions/android.hardware.location.gps.xml \
-    frameworks/base/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml \
+    frameworks/base/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml 
 
 PRODUCT_COPY_FILES += \
     device/lg/swift/proprietary/libgps.so:obj/lib/libgps.so \
