@@ -1,7 +1,7 @@
 #
 # Swift Config
 #
-
+PRODUCT_SPECIFIC_DEFINES += TARGET_PRELINKER_MAP=device/lg/swift/prelink-linux-arm.map
 TARGET_BOARD_PLATFORM := msm7k
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno200
 TARGET_ARCH_VARIANT := armv6-vfp
@@ -38,7 +38,6 @@ USE_CAMERA_STUB := false
 #Optimization 
 ENABLE_WTF_USE_ACCELERATED_COMPOSITING := true
 ENABLE_JSC_JIT := true
-
 
 
 BOARD_USES_QCOM_LIBS := true
