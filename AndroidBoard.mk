@@ -60,6 +60,7 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_COPY_FILES += \
     device/lg/swift/proprietary/libgps.so:obj/lib/libgps.so \
+    device/lg/swift/proprietary/libloc_api.so:obj/lib/libloc_api.so \
     device/lg/swift/prebuilt/yamato_pfp.fw:system/etc/firmware/yamato_pfp.fw \
     device/lg/swift/prebuilt/yamato_pm4.fw:system/etc/firmware/yamato_pm4.fw \
     device/lg/swift/prebuilt/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
